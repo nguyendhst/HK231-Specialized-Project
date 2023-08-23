@@ -13,7 +13,7 @@
 
 ## Project Overview
 
-This project is a low-code platform for promotion campaign automation. It is a web application that allows users (*e.g marketing team*) to create and manage promotion campaigns. This platform will be designed as a **microservice** to integrate seamlessly with various products and platforms, accommodate dynamic business needs, and improve user experience while ensuring efficient operational cost, data security, and flexible deployment options.
+This project is a low-code platform for promotion campaign automation. It includes a web application GUI that allows users (*e.g marketing team*) to create and manage promotion campaigns. This platform will be designed as a **microservice** to integrate seamlessly with various products and platforms, accommodate dynamic business needs, and improve user experience while ensuring efficient operational cost, data security, and flexible deployment options.
 
 The project is developed as part of the **CO4029 Sem 231 - Specialized Project** module at the Ho Chi Minh City University of Technology.
 
@@ -25,9 +25,9 @@ Therefore, promotion campaigns, being a critical aspect of marketing, can greatl
 
 ## Work Phases
 
-- [ ] Research Phase: This phase involves researching existing low-code platforms, understanding their strengths and weaknesses, and identifying features that would be beneficial for managing promotion campaigns.
+- [ ] [Research Phase](./documentation/research/README.md): This phase involves researching existing low-code platforms, understanding their strengths and weaknesses, and identifying features that would be beneficial for managing promotion campaigns.
 
-- [ ] 
+- [ ] *W.I.P*
 
 ## Project Goals
 
