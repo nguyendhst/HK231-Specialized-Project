@@ -38,8 +38,18 @@ Business process automation (BPA) is the technology-enabled automation of comple
 
 ### Low-code platform
 
-Low-code platforms are a type of business process automation (BPA) software that enables developers of varied experience levels to create applications for web and mobile, using drag-and-drop components and model-driven logic through a graphic user interface (GUI). [<sup>3</sup>](https://en.wikipedia.org/wiki/Low-code_development_platform)
+Low-code platforms are a type of business process automation (BPA) software that enables developers of varied experience levels to create applications for web and mobile, using drag-and-drop components and model-driven logic through a graphic user interface (GUI). Low-code platforms can also connect to various data sources, systems, and services, and support different devices and platforms. Low-code platforms are designed to be user-friendly, flexible, and scalable, and to accelerate the development and delivery of applications and processes.
+[<sup>3</sup>](https://en.wikipedia.org/wiki/Low-code_development_platform)
 
+### Characteristics of low-code platform
+
+- **Visual modeling**: Low-code platforms use visual modeling to create applications. This means that developers can drag and drop components into a canvas and connect them to create an application. This is in contrast to traditional coding, which requires developers to write every line of code.
+
+- **Reusable components**: Low-code platforms use reusable components to create applications. This means that developers can reuse components across multiple applications.
+
+- **Scalability and Flexibility**: Low-code platforms support scalability and flexibility, allowing applications to be easily adapted as business needs evolve.
+
+- **Cross-functional Collaboration**: Low-code platforms foster collaboration among different teams and stakeholders, enabling them to contribute to the application development process. [<sup>4</sup>](https://www.linkedin.com/advice/3/how-do-low-code-platforms-enable-cross-functional)
 
 
 ### Existing low-code platforms <a name="existing-low-code-platforms"></a>
