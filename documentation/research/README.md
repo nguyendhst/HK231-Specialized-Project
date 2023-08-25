@@ -56,62 +56,18 @@ Low-code platforms are a type of business process automation (BPA) software that
 
 #### Appian
 
-#### Overview
 
-#### Pros
+| Pros | Cons |
+| :--- | :--- |
+| - Easy to use, drag and drop interface | - Expensive |
+| - Good customer support | - Limited customization |
+| - Good security features | - Limited integration with other platforms |
+| - Good scalability | - Limited deployment options |
 
-#### Cons
+#### Camunda
 
-### Mendix
+#### Mendix
 
-#### Overview
+#### Microsoft Power Apps
 
-#### Pros
-
-#### Cons
-
-### OutSystems
-
-#### Overview
-
-#### Pros
-
-#### Cons
-
-### Microsoft Power Apps
-
-#### Overview
-
-#### Pros
-
-### IBM Cloud Pak for Automation
-
-#### Overview
-
-#### Pros
-
-#### Cons
-
-### Salesforce Lightning Platform
-
-#### Overview
-
-#### Pros
-
-#### Cons
-
-### Camunda
-
-#### Overview
-
-#### Pros
-
-#### Cons
-
-### Zoho Creator
-
-#### Overview
-#### Pros
-
-#### Cons
-
+#### IBM Cloud Pak for Automation
