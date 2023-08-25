@@ -51,23 +51,32 @@ Low-code platforms are a type of business process automation (BPA) software that
 
 - **Cross-functional Collaboration**: Low-code platforms foster collaboration among different teams and stakeholders, enabling them to contribute to the application development process. [<sup>4</sup>](https://www.linkedin.com/advice/3/how-do-low-code-platforms-enable-cross-functional)
 
-
 ### Existing low-code platforms <a name="existing-low-code-platforms"></a>
 
 #### Appian
 
+- [Appian Low-Code Platform](https://appian.com/products/platform/low-code.html)
 
-| Pros | Cons |
-| :--- | :--- |
-| - Easy to use, drag and drop interface | - Expensive |
-| - Good customer support | - Limited customization |
-| - Good security features | - Limited integration with other platforms |
-| - Good scalability | - Limited deployment options |
+- Core features:
+	- **Drag-and-drop interface**: Appian’s drag-and-drop interface allows users to build applications visually, without writing code. This makes it easy for non-technical users to contribute to the application development process.
+
+    ![Appian drag-and-drop interface](./images/low-code-exploreview-100.png)
+
+	- 
+
 
 #### Camunda
+
 
 #### Mendix
 
 #### Microsoft Power Apps
 
 #### IBM Cloud Pak for Automation
+
+- [IBM Business Automation Workflow](https://www.ibm.com/products/business-automation-workflow?lnk=flatitem)
+
+- Core features
+	- **Low-code Drag-and-drop interface for building application**:
+
+	![IBM drag-and-drop interface](./images/ibm-cloudpak01.png)

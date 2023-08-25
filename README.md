@@ -13,7 +13,7 @@
 
 ## Project Overview
 
-This project is a low-code platform for promotion campaign automation. It includes a web application GUI that allows users (*e.g marketing team*) to create and manage promotion campaigns, while ultilizing a Business Rule Engine to handle the evaluation of data. This platform will be designed as a **microservice** to integrate with various products and platforms, accommodate dynamic business needs, and improve user experience while ensuring efficient operational cost, data security, and flexible deployment options.
+This project is a low-code platform for promotion campaign automation. It includes a web application GUI that allows users (*e.g marketing team*) to create and manage promotion campaigns, while ultilizing a Business Rule Engine to handle the evaluation of data. This platform will be designed as a **microservice** to integrate with various platforms, accommodate dynamic business needs, and improve user experience while ensuring efficient operational cost, data security, and flexible deployment options.
 
 The project is developed as part of the **CO4029 Sem 231 - Specialized Project** module at the Ho Chi Minh City University of Technology.
 
@@ -50,4 +50,3 @@ The expected outcome of this project is a functional low-code platform that simp
 ## Project Layout
  
 - [Documentation](./documentation/README.md)
-
