@@ -46,10 +46,7 @@ gitGraph LR:
 
 - **Project management tool**: [Github Project](https://github.com/users/nguyendhst/projects/1)
 
-- **Project management methodology**: [Agile](https://www.atlassian.com/agile/project-management/epics-stories-themes)
-
-- **Project management process**: [Scrum](https://www.atlassian.com/agile/scrum)
-
+- **Project management methodology**: Project management will be done using the Scrum methodology. The project will be divided into multiple iterations, each of which will be completed within a fixed time frame called a sprint. Each sprint will have a set of tasks to be completed, and at the end of each sprint, the team will deliver a working product increment. The product increment will be reviewed and evaluated by the team and the stakeholders, and the feedback will be used to improve the product in the next sprint.
 
 ## Documentation
 
