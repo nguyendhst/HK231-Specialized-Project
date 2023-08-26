@@ -124,10 +124,20 @@ Low-code platforms are a type of business process automation (BPA) software that
 
 	![IBM drag-and-drop interface](./images/ibm-cloudpak01.png)
 
+	- **Designed for general purpose**:
+
+	![IBM Workflow UI](./images/ibm-cloudpak02.png)
+
+	- **Support integration with other services**: 
+
 - Problems:
 	- Require business users to develop from scratch to serve the specific use-case requirements.
 	- Learning curve might be too high for business users.
 
+- What the project aims to solve:
+	- Provide a low-code platform that is designed for a specific use-case: Promotion campaign automation.
+	- Provide a low-code platform that is easy to use for business users.
+	- A flexible, self-hosted standalone platform that can be integrated with other services and not tied to a specific cloud provider.
 
 
 ## References
