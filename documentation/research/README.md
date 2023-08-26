@@ -8,6 +8,7 @@
 	2. [Business process](#business-process)
 2. [Low-code platform](#low-code-platform)
 	1. [Existing low-code platforms](#existing-low-code-platforms)
+3. [References](#references)
 
 ## Domain knowledge
 ### Promotion campaign
@@ -31,16 +32,44 @@ Some methods of this process contain an offer, coupon discounts, free sample dis
 
 - **Customer Segmentation/Audience Targeting**: Targeting a specific group of customers to run a promotion campaign so that the suitable offer can be provided. For example: Targeting students to run a promotion campaign aimed at customer with limited budget.
 
+- **Data source**: The data source is the source of data for the promotion campaign. It can be a database, a file, or an API. For example: A database of all customers, a file containing all orders, or an API that provides customer information.
+
+- **Examples of promotion campaign**:
+
+<table>
+	<tr>
+		<td>
+			<img src="./images/pc1.jpg" alt="promotion-campaign-01" width="70%">
+		</td>
+		<td>
+			<img src="./images/pc2.jpg" alt="promotion-campaign-02" width="50%">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="./images/pc3.jpg" alt="promotion-campaign-03" width="70%">
+		</td>
+		<td>
+			<img src="./images/pc5.png" alt="promotion-campaign-04" width="70%">
+		</td>
+	</tr>
+</table>
+
 ## Business process automation
 
 Business process automation (BPA) is the technology-enabled automation of complex business processes. It can streamline a business for simplicity, achieve digital transformation, increase service quality, improve service delivery or contain costs. It consists of integrating applications, restructuring labor resources and using software applications throughout the organization. Robotic process automation is an emerging field within BPA and uses artificial intelligence. [<sup>2</sup>](https://en.wikipedia.org/wiki/Business_process_automation)
 
 
-### Low-code platform
+## Low-code platform
 
 Low-code platforms are a type of business process automation (BPA) software that enables developers of varied experience levels to create applications for web and mobile, using drag-and-drop components and model-driven logic through a graphic user interface (GUI). Low-code platforms can also connect to various data sources, systems, and services, and support different devices and platforms. Low-code platforms are designed to be user-friendly, flexible, and scalable, and to accelerate the development and delivery of applications and processes.
 [<sup>3</sup>](https://en.wikipedia.org/wiki/Low-code_development_platform)
 
+### Low-Code vs Traditional Coding
+
+- Main difference: Low-code platforms use visual modeling to create applications, while traditional coding requires developers to write every line of code.
+
+- Main advantage: Accelerate software development process. It allows developers to automate repetitive tasks. Non-technical users can also contribute to the application development process.
 ### Characteristics of low-code platform
 
 - **Visual modeling**: Low-code platforms use visual modeling to create applications. This means that developers can drag and drop components into a canvas and connect them to create an application. This is in contrast to traditional coding, which requires developers to write every line of code.
@@ -62,7 +91,7 @@ Low-code platforms are a type of business process automation (BPA) software that
 
     ![Appian drag-and-drop interface](./images/low-code-exploreview-100.png)
 
-	- 
+	-  
 
 
 #### Camunda
@@ -80,3 +109,11 @@ Low-code platforms are a type of business process automation (BPA) software that
 	- **Low-code Drag-and-drop interface for building application**:
 
 	![IBM drag-and-drop interface](./images/ibm-cloudpak01.png)
+
+- Problems:
+	- Require business users to develop from scratch to serve the specific use-case requirements.
+	- Learning curve might be too high for business users.
+
+
+
+## References
