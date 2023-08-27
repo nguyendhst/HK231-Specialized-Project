@@ -98,18 +98,29 @@ Low-code platforms are a type of business process automation (BPA) software that
 - [AppSmith Platform](https://www.appsmith.com/)
 
 - Core features: 
-	- Open-Source Low-Code Platform fo internal tool development for business
+	- Open-Source Low-Code Platform for internal tool development for business
 	- Drag and Drop interface: Appsmith provides many types of interface components, interactive elements: Form, JSON form, Input, Rich Text Editor, Currency Input, Phone Input,... This allows non-technical users easily to create the front-end of applications, dashboards, ...
 	![Appsmith main view editor](./images/main-view-of-appsmith-editor.png)
 	- Support connection to many datasources, from API, Databases, ...with friendly query builders
 	![Appsmith supports connections to datasources](./images/data-support-appsmith.png)
 	- LowCode: Appsmith allows user using JavaScript to customize the way data rendered into UI and retrieved from datasources, or event listeners
 	- Appsmith provides many pre-built templates: crm, analytics dashboard
+	![AppSmith Template Support](./images/appsmith-template-support.png)
+	- Security: role-based access control, data encryption, and user authentication, third-party identity providers like OAuth
 - Problems:
-	- Besides datasources, components supported, it is hard for users to add new components or other third-party datasources
+	- Besides datasources supported, it is hard for users to add new components or other third-party datasources
 	- Take time and effort to familiarize yourself with the concepts and syntax specific to Appsmith.
-#### Camunda
 
+#### Tooljet
+- [Tooljet Platform](https://www.tooljet.com/)
+- Core features:
+	- Tooljet is also an open-source low-code platform internal tool development for business
+	- Drag and Drop interface: support custom components with React[<sup>5</sup>](https://docs.tooljet.com/docs/widgets/custom-component)
+	- Tooljet offers a wider range of integrations with third-party services, databases when comparing with Appsmith
+	![Services and Datasources supported by Tooljet](./images/toojet-services-database-support.png)
+	- Toojet database, Python support
+
+#### Camunda
 
 #### Mendix
 
