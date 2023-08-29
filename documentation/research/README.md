@@ -120,8 +120,6 @@ Low-code platforms are a type of business process automation (BPA) software that
 	![Services and Datasources supported by Tooljet](./images/toojet-services-database-support.png)
 	- Toojet database, Python support
 
-#### Camunda
-
 #### Mendix
 
 #### Microsoft Power Apps
@@ -139,7 +137,9 @@ Low-code platforms are a type of business process automation (BPA) software that
 
 	![IBM Workflow UI](./images/ibm-cloudpak02.png)
 
-	- **Support integration with other services**: 
+	- **Support flow-graph tool**: 
+
+	![IBM Integration](./images/ibm-cloudpak03.png)
 
 - Problems:
 	- Require business users to develop from scratch to serve the specific use-case requirements.
