@@ -33,7 +33,7 @@ Some methods of this process contain an offer, coupon discounts, free sample dis
 - **Customer Segmentation/Audience Targeting**: Targeting a specific group of customers to run a promotion campaign so that the suitable offer can be provided. For example: Targeting students to run a promotion campaign aimed at customer with limited budget.
 
 - **Data source**: The data source is the source of data for the promotion campaign. It can be a database, a file, or an API. For example: A database of all customers, a file containing all orders, or an API that provides customer information.
-
+<!--
 - **Examples of promotion campaign**:
 
 <table>
@@ -53,7 +53,7 @@ Some methods of this process contain an offer, coupon discounts, free sample dis
 			<img src="./images/pc5.png" alt="promotion-campaign-04" width="70%">
 		</td>
 	</tr>
-</table>
+</table>-->
 
 ## Business process automation
 
@@ -62,8 +62,7 @@ Business process automation (BPA) is the technology-enabled automation of comple
 
 ## Low-code platform
 
-Low-code platforms are a type of business process automation (BPA) software that enables developers of varied experience levels to create applications for web and mobile, using drag-and-drop components and model-driven logic through a graphic user interface (GUI). Low-code platforms can also connect to various data sources, systems, and services, and support different devices and platforms. Low-code platforms are designed to be user-friendly, flexible, and scalable, and to accelerate the development and delivery of applications and processes.
-[<sup>3</sup>](https://en.wikipedia.org/wiki/Low-code_development_platform)
+Low-code platforms are a type of business process automation (BPA) software that enables developers of varied experience levels to create applications for web and mobile, using drag-and-drop components and model-driven logic through a graphic user interface (GUI). Low-code platforms can also connect to various data sources, systems, and services, and support different devices and platforms. Low-code platforms are designed to be user-friendly, flexible, and scalable, and to accelerate the development and delivery of applications and processes[<sup>3</sup>](https://en.wikipedia.org/wiki/Low-code_development_platform)
 
 ### Low-Code vs Traditional Coding
 

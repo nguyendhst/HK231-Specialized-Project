@@ -25,6 +25,10 @@ Under the traditional approach, the process of creating and managing these campa
  
 Promotion campaigns, being a critical aspect of marketing, can greatly benefit from automation. The use of a low-code platform can simplify the process of managing these campaigns, allowing non-technical users to contribute effectively and reducing the development time and cost.
 
+#### Problems
+
+#### Solutions
+
 ## Work Phases
 
 - [ ] [Research Phase](./documentation/research/README.md): This phase involves researching existing low-code platforms, understanding their strengths and weaknesses, and identifying features that would be beneficial for managing promotion campaigns.
@@ -33,7 +37,7 @@ Promotion campaigns, being a critical aspect of marketing, can greatly benefit f
 
 ## Project Goals
 
-The expected outcome of this project is a functional low-code platform that simplifies and automates the management of promotion campaigns. It should provide a user-friendly interface, seamless data integration, robust security features, and flexible deployment options. The platform should be able to handle the following tasks:
+The expected outcome of this project is a MVP product that simplifies and automates the management of promotion campaigns. The platform should be able to handle the following tasks:
 
 - **Campaign management**: Marketing teams can run promotion campaign which involves managing advertising messages, budgets, validity time and benefits for targeted segments of customers. A Low-Code GUI is expected to be provided to allow users to create and manage these campaigns.
 
