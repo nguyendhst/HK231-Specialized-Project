@@ -1,13 +1,45 @@
-# Architectural Overview
 
-## Approach
+# System Design
+
+##  Requirements
+
+### In scope
+- Users should be able to create and edit web applications using a visual drag and drop interface.
+- Users should be able to define the business logic of their application using a visual interface.
+- Code-based customization options should be available for each element in the visual interface.
+- Users should be able to generate code from the platform and compile and run it.
+
+### Out of scope
+- Users should be able to debug their application using the platform.
+- Users should be able to import code into the platform and be able to work on it.
+
+
+
+
+## Architectural Overview
+
+### Basic User Flow
+
+```mermaid
+graph TD;
+   A[Sign In/Sign Up] --> B[Create New Project];
+   B --> C[Design Interface];
+   C --> C1[Drag and Drop Components];
+   C1 --> D[Define Business Workflow];
+   D --> D1[Drag and Drop Business Logic Components];
+   D1 --> E[Generate Code];
+   D --> E[Generate Code];
+   E --> F[Compile and Run];
+```	
+
+### Internal Architecture
 
 There are three main approach to implement the internal architecture of the platform:
 - Editor -> Code + Metadata -> Code
 - Editor -> JSON -> Code
 - Editor -> Intermediate Representation -> Code
 
-### Editor -> Code + Metadata -> Code
+#### Editor -> Code + Metadata -> Code
 
 ```mermaid
 stateDiagram
@@ -30,7 +62,7 @@ elem.meta.set('info', 'This is a draggable element');
 editor.render(elem);
 ```
 
-### Editor -> JSON -> Code
+#### Editor -> JSON -> Code
 
 ```mermaid
 stateDiagram
@@ -66,7 +98,7 @@ The JSON representation can include information about the application's structur
 }
 ```
 
-### Editor -> Intermediate Representation -> Code
+#### Editor -> Intermediate Representation -> Code
 
 ```mermaid
 stateDiagram
