@@ -1,4 +1,3 @@
-
 # System Design
 
 ##  Requirements
@@ -7,14 +6,13 @@
 - Users should be able to create and edit web applications using a visual drag and drop interface.
 - Users should be able to define the business logic of their application using a visual interface.
 - Code-based customization options should be available for each element in the visual interface.
-- Users should be able to generate code from the platform and compile and run it.
+- Connection to external data sources should be possible.
+- Users should be able to generate code from the platform and compile to a runnable application.
+- Testing of the application should be possible from the platform.
 
 ### Out of scope
 - Users should be able to debug their application using the platform.
 - Users should be able to import code into the platform and be able to work on it.
-
-
-
 
 ## Architectural Overview
 
@@ -29,8 +27,24 @@ graph TD;
    D --> D1[Drag and Drop Business Logic Components];
    D1 --> E[Generate Code];
    D --> E[Generate Code];
-   E --> F[Compile and Run];
+   E --> F[Compile to Executable];
+   F --> G[Test Run Application];
+   G --> H[Deploy Application];
 ```	
+#### High-level Components
+
+- Data Storage:
+	- Project and User Manager: Responsible for managing users and projects. It should be able to create, update, and delete users and projects.
+- Visual Editor:
+	- GUI Drag-and-drop Editor: Visual editor for creating and editing the interface of the application.
+	- Business Workflow Editor: Visual editor for creating and editing the business logic of the application.
+	- External Data Connector: Responsible for connecting to external data sources.
+- Code Generator:
+	- Model Translator: Responsible for translating the visual representation of the application into a model that can be used by the code generator.
+	- Code Templates: Pre-written code templates that can be used by the code generator.
+	- Template Engine: This component takes the business logic and the model and generates code from it.
+- Compiler:
+	- Build System: Responsible for compiling the generated code into a runnable application.
 
 ### Internal Architecture
 
