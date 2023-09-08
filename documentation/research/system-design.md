@@ -38,7 +38,7 @@ graph TD;
 - Visual Editor:
 	- GUI Drag-and-drop Editor: Visual editor for creating and editing the interface of the application.
 	- Business Workflow Editor: Visual editor for creating and editing the business logic of the application.
-	- External Data Connector: Responsible for connecting to external data sources.
+	- Data Mapping: Responsible for mapping entities for the application.
 - Code Generator:
 	- Model Translator: Responsible for translating the visual representation of the application into a model that can be used by the code generator.
 	- Code Templates: Pre-written code templates that can be used by the code generator.
