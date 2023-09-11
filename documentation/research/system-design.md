@@ -7,7 +7,8 @@
 - Users should be able to define the business logic of their application using a visual interface.
 - Code-based customization options should be available for each element in the visual interface.
 - Connection to external data sources should be possible.
-- Users should be able to generate code from the platform and compile to a runnable application.
+- Users should be able to generate code from the platform to produce a runnable application.
+- CI/CD should be possible from the platform.
 - Testing of the application should be possible from the platform.
 
 ### Out of scope
@@ -68,6 +69,7 @@ This approach involves the use of an editor to create code and associated metada
 Limitations of this approach include issues with drag and drop functionality, CSS inheritance issues, inability to import code, and the requirement of adding custom attributes to the markup for the functionality of the editor.
 
 - Example pseudo-code:
+
 ```javascript
 const editor = new Editor();
 const elem = editor.create('div');
@@ -112,14 +114,14 @@ The JSON representation can include information about the application's structur
 }
 ```
 
-#### Editor -> Intermediate Representation -> Code
+#### Editor -> Intermediate Components -> Code
 
 ```mermaid
 stateDiagram
 	direction LR
 	[*] --> Editor
-	Editor --> IR
-	IR --> Code
+	Editor --> IC
+	IC --> Code
 	Code --> [*]
 ```
 
