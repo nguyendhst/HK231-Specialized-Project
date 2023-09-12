@@ -12,7 +12,7 @@
 - Testing of the application should be possible from the platform.
 
 ### Out of scope
-- Users should be able to debug their application using the platform.
+- Users should be able to debug their application using the platform. (optional)
 - Users should be able to import code into the platform and be able to work on it.
 
 ## Architectural Overview
