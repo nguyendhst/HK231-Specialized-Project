@@ -35,10 +35,11 @@
 3. User can edit a project through dnd interface
 4. User can customize components in edit view
 5. User can connect to variety of external data sources and make the queries
+6. User can create and edit business logics then apply into the project
+7. From development stage, user can be able to release a version of a product in staging stage or production stage (generate code to produce a runnable application.)
+    - *Optional:* User can debug the application
 
 **Not Yet from Requirement to Scenario**
-- Create and edit business logics
-- Generate runnable product
 - CI/CD should be possible from the platform.
 - Testing of the application should be possible from the platform.
 ## Use-case Scenario
@@ -112,13 +113,48 @@
 | **Alternative Flow** |4.1 System can't make connection <br/> 4.2 System returns to the config view <br/> *Usecase continues at step 3* <br/> 3.1 (case: return from step 4.2) <br/> 3.2 User chooses 'Back' <br/> 3.3 System return to datasource choose view <br/> *Usecase continues at step 1*|
 | **Exception Flow** | None |
 ### Create and Edit Business Logic
-| **Usecase**  | Sign-in |
+| **Usecase**  | Create and Edit a Business Logic |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** ||
-| **Trigger** ||
-| **Pre-condition** ||
+| **Description** | User defines and applies business logic into the product |
+| **Trigger** | User clicks tab create an business logic in workspace<br/> User is in DnD editor and wants to add business logic to a component <br/> |
+| **Pre-condition** |User is in workspace and click tab create an business logic <br/> User is in component config then clicks add business logic |
+| **Post-condition** | System saves or updates the logic business or adds the business logic to the component <br/>|
+| **Normal Flow** | 1. User clicks a blank business logic or an existing business logic <br/> 2. System brings user to another DnD edit view. <br/> 3. User chooses provided components/node and dnd into the dashboard <br/> 3. User click 'save' button <br/>4. System updates and saves the changes|
+| **Alternative Flow** |3.1 User doesn't click save button, but closes the edit view <br/> 3.2 System shows modal to make sure user's choice. <br/> 3.3 User clicks 'Save the changes' <br/> 3.4 System saves the updated business logic. <br/> *Usecase ends* <br/> 3.3.1 User clicks 'Cancel' <br/> *Usecase continue at step 3* <br/> 3.3.2 User clicks 'Don't save' <br/> 3.3.3 System keep the previous version of project <br/> *Usecase ends*|
+| **Exception Flow** | At any step, if user loses internet access, system saves and updates the latest change <br/> *Usecase ends*|
+
+### Generate a runnable application (deploy the app)
+| **Usecase**  | Generate a runnable application |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | From the development stage of the product, user can decide to deploy it|
+| **Trigger** | User clicks the 'deployment' button in edit view.|
+| **Pre-condition** | User has a developed product and in the edit view.|
+| **Post-condition** | User can use deployed application|
+| **Normal Flow** | 1. In the edit view in development stage, user click 'deploy' button <br/> 2. System shows up a config view for user <br/> 3. User choose 'production' and input version information <br/> 4. System prepares the app and enable the 'deploy' button <br/> 5. User click the button <br/> 6. System opens the application in the new window. |
+| **Alternative Flow** | None |
+| **Exception Flow** | None |
+---
+| **Usecase**  | Test runnable of the application  |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | In the preview mode, user can test the functionality of the app |
+| **Trigger** | In the edit view, click the 'Preview' button|
+| **Pre-condition** | User has a developed product and in the edit view.  |
 | **Post-condition** ||
-| **Normal Flow** ||
-| **Alternative Flow** ||
-| **Exception Flow** ||
+| **Normal Flow** | 1. At the preview mode, user as an end-user of the application uses the product <br/> 2. System provides the flow of each functionality at the bottom of the mode <br/> 3. User checks the flow |
+| **Alternative Flow** | None |
+| **Exception Flow** | None |
+
+---
+| **Usecase**  | Debug the application |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** |In the preview mode, user can test the functionality of the app|
+| **Trigger** |In the edit view, click the 'Preview' button|
+| **Pre-condition** |User has a developed product and in the edit view and User is in preview mode.|
+| **Post-condition** |User can test the application or find the error|
+| **Normal Flow** | 1. At the test-flow view, user change the mode to 'steps by steps' <br/> 2. User chooses which part to inspect <br/> 3. After user triggers the function, system provides detail data flow through each step then stop <br/> 4. User click the button 'run next' <br/> 5. System stops the test when passing all steps |
+| **Alternative Flow** | 1.1 User can choose what step to stop <br/> 1.2 System runs until meeting the breakpoint <br/> *Usecase continues at step 4* <br/> 3.1 System raises the errors then disable 'run next' button <br/> *Usecase ends*| 
+| **Exception Flow** | None |
