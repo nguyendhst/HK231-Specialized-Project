@@ -17,8 +17,6 @@
 
 7. Testing of the application should be possible from the platform.
 
----
-8. *Sign in by username, email and by third providers* ??
 ## Non-functional Requirements
 1. *Ease of use:*  The platform should be easy to use for both non-technical and technical users. The platform should have a drag-and-drop interface with various supported components, templates.
 2. *Reliability:* The platform should be reliable and available 24/7: load balancing, etc.
@@ -30,7 +28,7 @@
 ## Usecase list
 1. *Authentication:* Sign in, Sign up, Logout, ForgotPassword
 2. *Account Management:* 
-3. *Project Management:* Create a project, Edit a project, DnD interaction, Create and Edit Business Logics, Search and Filter, Customize components, Test project, Deploy Project, (*optional*) Debug
+3. *Project Management:* Create a project, Edit a project, DnD interaction, Create and Edit Business Logics, Search and Filter, Customize components, Test project, Deploy Project, Invite collaborator, (*optional*) Debug
 4. *Datasource Connection:* Connect to external datasource and Make queries
 ### Detail usecase for user 
 **Scenario Available**
@@ -55,7 +53,7 @@
 | **Pre-condition** | User has internet access <br/> Platform is working normally |
 | **Post-condition** | User logs in successfully into platform |
 | **Normal Flow** | 1. User enters username and password and click button 'Sign in' <br/> 2. System checks the information provided <br/> 3. System sends notification informing successfully login the redirect to workspace page of user <br/>  *Usecase ends*   |
-| **Alternative Flow** | 1.1 User don't choose sign in by username and password but click button sign in by the third provider <br/> 1.2 System redirects to the authentication page of the third provider <br/> 1.3 User provides authentication information <br/> 1.4 Third provider checks information provided and allow access <br/> *Usecase continues at step 4* |
+| **Alternative Flow** | 1.1 User don't choose sign in by username and password but click button sign in by the third provider <br/> 1.2 System redirects to the authentication page of the third provider <br/> 1.3 User provides authentication information <br/> 1.4 Third provider checks information received and allow access <br/> *Usecase continues at step 4* |
 | **Exception Flow** | 3.1 System sends notification that the information provided is wrong or not existed <br/> 3.2 User chooses login again <br/> *Usecase continues at step1* <br/>3.2.1 User chooses forgot password <br/> *Usecase continues at ...*  <br/> 3.2.2 User cancels the sign in phase <br/> *Usecase ends*|
 
 ### Sign up
@@ -66,11 +64,33 @@
 | **Trigger** | At the login page, click button 'Sign up' <br/> Click the link sent in mail when user is invited to use|
 | **Pre-condition** | User has internet access <br/> Platform is working normally|
 | **Post-condition** |New account is created|
-| **Normal Flow** |1. |
-| **Alternative Flow** ||
-| **Exception Flow** ||
+| **Normal Flow** |1. User inputs information form then click 'submit' <br/> 2. System receives and creates an inactivated account <br/> 3. System sends email to user to activate account <br/> 4. User activates account <br/> 5. System activates account and redirect to login page <br/> *Usecase ends*  |
+| **Alternative Flow** | 1.1 User chooses to sign up by third party provider 1.2 System redirects to authentication page of third provider <br/> 1.3 User grants authentication to system <br/> 1.4 System takes the information received to create a account <br/> 1.5 System redirects to the main workspace of the account <br/> *Usecase ends* |
+| **Exception Flow** | If user exits at any step, *Usecase ends*  |
 
 ### Invite a user
+| **Usecase**  | Invite new user |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** |User wants to make their friends, colleagues to try platform|
+| **Trigger** | Click 'invite new user' in the account management view <br/> |
+| **Pre-condition** | User has an account and is logged in |
+| **Post-condition** | System send invitation to the email user input|
+| **Normal Flow** | 1. User clicks 'invite new user' then input one or many emails into input <br/> 2. System sends invitations to emails <br/> 3. System alerts 'Send invitations successfully' <br/> *Usecase ends* |
+| **Alternative Flow** | None |
+| **Exception Flow** | If user exits at any step, *Usecase ends* |
+
+### Invite collaborator
+| **Usecase**  | Invite collaborators |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** |User invites collaborators to edit a project|
+| **Trigger** | Click 'invite collaborator' in the edit view <br/> |
+| **Pre-condition** | User is the owner of the project |
+| **Post-condition** | System send collaborate invitation to the email user input|
+| **Normal Flow** | 1. User clicks 'invite collaborators'  <br/> 2. System shows the input form <br/> 3. User inputs emails and their role and edit, view access <br/> 4. System setups and send invitation to emails <br/> *Usecase ends* |
+| **Alternative Flow** | None |
+| **Exception Flow** | If user exits at any step, *Usecase ends* |
 
 ### Search and Filter existed project
 | **Usecase**  | Search project |
