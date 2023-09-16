@@ -25,6 +25,7 @@
 
 # Usecase
 ## Diagram
+[Usecase Diagram](https://drive.google.com/file/d/1v7eiw8cQHYVr5MXE9QcOIMr9TU7ZAD1Y/view?usp=sharing)
 ## Usecase list
 1. *Authentication:* Sign in, Sign up, Logout, ForgotPassword
 2. *Account Management:* 
@@ -67,18 +68,6 @@
 | **Normal Flow** |1. User inputs information form then click 'submit' <br/> 2. System receives and creates an inactivated account <br/> 3. System sends email to user to activate account <br/> 4. User activates account <br/> 5. System activates account and redirect to login page <br/> *Usecase ends*  |
 | **Alternative Flow** | 1.1 User chooses to sign up by third party provider 1.2 System redirects to authentication page of third provider <br/> 1.3 User grants authentication to system <br/> 1.4 System takes the information received to create a account <br/> 1.5 System redirects to the main workspace of the account <br/> *Usecase ends* |
 | **Exception Flow** | If user exits at any step, *Usecase ends*  |
-
-### Invite a user
-| **Usecase**  | Invite new user |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** |User wants to make their friends, colleagues to try platform|
-| **Trigger** | Click 'invite new user' in the account management view <br/> |
-| **Pre-condition** | User has an account and is logged in |
-| **Post-condition** | System send invitation to the email user input|
-| **Normal Flow** | 1. User clicks 'invite new user' then input one or many emails into input <br/> 2. System sends invitations to emails <br/> 3. System alerts 'Send invitations successfully' <br/> *Usecase ends* |
-| **Alternative Flow** | None |
-| **Exception Flow** | If user exits at any step, *Usecase ends* |
 
 ### Invite collaborator
 | **Usecase**  | Invite collaborators |
@@ -161,30 +150,30 @@
 | **Normal Flow** | 1. User chooses config the component: name, UI, event, ... <br/> 2. System changes to config view <br/> 3. User customize the components through a click-based UI and click 'Save' <br/> 4. System updates the component UI based on configuration <br/> *Usecase ends*|
 | **Alternative Flow** |3.1 User can use code-based config by JS, ... and click 'Save'<br/> *Usecase continues at step 4*|
 | **Exception Flow** | None |
-### Connect to external Data Source
-| **Usecase**  | Connect to external data source |
+### Data mapping to External Data source
+| **Usecase**  | Data mapping to external datasource |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** | User can provide config, auth then system provides connection to data source|
-| **Trigger** | User clicks 'add data source' in the project|
+| **Description** | User can create entity in the project and read/write data from/to external datasource|
+| **Trigger** | User clicks 'create and mapping entity' in the project|
 | **Pre-condition** | User has datasource and can provide access config <br/> User is in a project or workspace. |
 | **Post-condition** | System can access to data source and can CRUD based on authority allowed |
-| **Normal Flow** |1. User chooses type of datasource and specific datasource <br/> 2. System provides the config form based on the chosen datasource. 3. User inputs the config <br/> 4. System uses the configs request and make connection to datasource then redirect to query config view <br/> 5. User configs the query then click 'Save' <br/> 6. System saves the connection and queries <br/> *Usecase ends*|
-| **Alternative Flow** |4.1 System can't make connection <br/> 4.2 System returns to the config view <br/> *Usecase continues at step 3* <br/> 3.1 (case: return from step 4.2) <br/> 3.2 User chooses 'Back' <br/> 3.3 System return to datasource choose view <br/> *Usecase continues at step 1*|
+| **Normal Flow** |1. User creates entities and their relationships through a low-code UI of system <br/> 2. System shows a modal for user to choose datasource <br/> 3. User choose a datasource <br/> 4. System shows a form of datasouce config  <br/> 5. User provides config and grant access to system <br/>6. System alerts connect successfully and provide form for user to define datatype from external datasource <br/> 7. User defines datatype <br/> 8. System provides space for user to define mapping to entities <br/> 9. System does the mapping and saves <br/> *Usecase ends*|
+| **Alternative Flow** |5.1 System can't make connection <br/> 5.2 System returns to the config view <br/> *Usecase continues at step 5* |
 | **Exception Flow** | None |
-### Create and Edit Business Logic
-| **Usecase**  | Create and Edit a Business Logic |
+### Create and Edit Business Process
+| **Usecase**  | Create and Edit a Business Process |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** | User defines and applies business logic into the product |
-| **Trigger** | User clicks tab create an business logic in workspace<br/> User is in DnD editor and wants to add business logic to a component <br/> |
-| **Pre-condition** |User is in workspace and click tab create an business logic <br/> User is in component config then clicks add business logic |
-| **Post-condition** | System saves or updates the logic business or adds the business logic to the component <br/>|
-| **Normal Flow** | 1. User clicks a blank business logic or an existing business logic <br/> 2. System brings user to another DnD edit view. <br/> 3. User chooses provided components/node and dnd into the dashboard <br/> 3. User click 'save' button <br/>4. System updates and saves the changes <br/> *Usecase ends*|
+| **Description** | User defines and applies business process into the product |
+| **Trigger** | User clicks tab create an business process in workspace<br/> User is in DnD editor and wants to add business process to a component <br/> |
+| **Pre-condition** |User is in workspace and click tab create an business process <br/> User is in component config then clicks add business process |
+| **Post-condition** | System saves or updates the process business or adds the business process to the component <br/>|
+| **Normal Flow** | 1. User clicks a blank business process or an existing business process <br/> 2. System brings user to another DnD edit view. <br/> 3. User chooses provided components/node about business logic and dnd into the dashboard <br/> 3. User click 'save' button <br/>4. System updates and saves the changes <br/> *Usecase ends*|
 | **Alternative Flow** |3.1 User doesn't click save button, but closes the edit view <br/> 3.2 System shows modal to make sure user's choice. <br/> 3.3 User clicks 'Save the changes' <br/> 3.4 System saves the updated business logic. <br/> *Usecase ends* <br/> 3.3.1 User clicks 'Cancel' <br/> *Usecase continue at step 3* <br/> 3.3.2 User clicks 'Don't save' <br/> 3.3.3 System keep the previous version of project <br/> *Usecase ends*|
 | **Exception Flow** | At any step, if user loses internet access, system saves and updates the latest change <br/> *Usecase ends*|
 
-### Generate a runnable application (deploy the app)
+### Deploy application
 | **Usecase**  | Generate a runnable application |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
