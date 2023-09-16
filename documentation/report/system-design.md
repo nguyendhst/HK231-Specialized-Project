@@ -119,56 +119,45 @@ A Microservices Architecture is an architectural method that relies on a series 
 
 #### Chosen architectural style
 
-For a low-code platform that includes a web-based user interface for modeling applications, defining business logic, and deploying web applications, a suitable architecture style could be a combination of the following architectural patterns:
+For a low-code platform that includes a web-based user interface for modeling applications, defining business logic, and deploying web applications. There are several prolems that need to be addressed:
 
-**Microservices Architecture:**
+- Performance: The platform should be able to handle a large number of users and applications.
+- Scalability: The platform should be able to scale up and down based on demand since a common runtime environment is used for all applications.
+- Many core functionalities:
+	- Data Management
+	- Business Logic Execution
+	- Application Deployment
 
-- Divide the server-side part of the platform into smaller, loosely coupled microservices that handle specific functionalities.
-- Separate services can handle user management, project management, application deployment, and executing business logic.
-- Benefits: Modularity, scalability, and independent development and deployment of services.
+Using a **microservices architecture**, we can address these problems by breaking down the platform into smaller, more manageable services. Each service can be developed, tested, and deployed independently, allowing for better control of the resources used by the system. This also allows for easier handling of scalability and performance, as each service can be scaled separately.
 
-**Client-Server Architecture:**
+However, this can add more complexity to the development process:
+- Communication between services can be challenging to manage.
+- It can be challenging to determine how different components relate to each other.
+- Each microservice has its own set of logs, which makes debugging more complicated.
 
+Instead, to better manage the complexity of the system, we can use a **modular monolith architecture**. This architecture allows us to break down the system into smaller modules, each responsible for a specific feature or functionality. These modules can be developed, tested, and deployed independently, allowing for better control of the resources used by the system. This also allows for easier handling of scalability and performance, as each module can be scaled separately.
+
+
+**Modular Monolith Architecture:**[<sup>10</sup>](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
+
+<a href="./images/mono-vs-micro.webp"><img src="./images/mono-vs-micro.webp" alt="Modular Monolith Architecture" width="500"/></a>
+
+- Implement the server-side application as a single unit (monolith), but the codebase is organized into several modules. 
+- Each module is responsible for a specific feature or functionality, and modules interact with each other through well-defined interfaces.
+- Clean Architecture can be used to define the structure of the application.
+
+
+**Stateless Client-Server Architecture:**
+
+- Implement a stateless client-server architecture where the server does not store any client state.
 - Utilize a client-server architectural pattern where the web-based user interface (web browser client) communicates with the server-side components.
 - The client interface allows users to model applications, define business logic, and interact with the platform.
 - The server-side components handle the storage, retrieval, and execution of user-defined models and application logic.
 - Benefits: Separation of concerns, easier user interaction, and centralized management of data and logic.
 
-**Event-Driven Architecture:**
-
-- Implement an event-driven approach to handle interactions and communication between different components of the platform.
-- Events can be triggered when a user models an application, defines business logic, or deploys an application.
-- Event-driven architecture allows for decoupling and asynchronous processing of events, enhancing scalability and responsiveness.
-- Benefits: Loose coupling, scalability, and flexibility in handling user interactions and system events.
 
 ### Key Components
 
-- **User Management Microservice:**
-
-This microservice handles user authentication, registration, profile management, and access control.
-It provides APIs for user-related operations, such as user creation, authentication, and updating user profiles.
-
-- **Project Management Microservice:**
-
-	- This microservice is responsible for managing user projects within the platform.
-	- It handles operations like creating, updating, and deleting projects, as well as retrieving project information.
-	- It provides APIs for project management, such as project creation, retrieval, and modification.
-
-- **Application Deployment Microservice:**
-
-	- This microservice focuses on deploying the web applications created by users within the platform.
-	- It receives the application models, validates them, and handles the deployment process.
-	- It may interact with other microservices to ensure the availability of necessary resources for the deployed applications.
-
-- **Business Logic Execution Microservice:**
-
-	- This microservice is responsible for executing the business logic defined by users within their applications.
-	- It receives the user-defined logic, which can be in the form of scripts, rules, workflows, or other configurations.
-	- It executes the logic based on the runtime context and provides the necessary data and services to support the execution.
-
-These microservices can communicate with each other using well-defined APIs and protocols, such as RESTful APIs or message queues. The communication can be synchronous or asynchronous, depending on the requirements of the platform.
-
-By adopting a microservices architecture, the low-code platform can benefit from modularity, scalability, independent development and deployment, and the ability to incorporate new functionalities or services without affecting the entire system.
 
 
 ### Architecture Diagrams
