@@ -1,51 +1,44 @@
-# Actors
-- Citizen developer (non-technical developer)
-- Developer
-# Requirements
-## Functional Requirements
-1. Users should be able to create and edit web applications using a visual drag and drop interface.
+# Report: Usecase 
 
-2. Users should be able to define the business logic of their application using a visual interface.
+## Actors:
+- Citizen Developers
+- Developers
 
-3. Code-based customization options should be available for each element in the visual interface.
+## Requirements:
+### Functional Requirements
+1. *Authentication:* Sign in, Sign up, Log out
+2. *Project Management:* Create and Edit project, Create and Edit Business Management, Search and Filter Project, DnD UI, Code-based component customization, Invite Collaborators, **Test application, Deploy Project**
+3. *Data mapping:* Create Data Entities, Connect and to External Datasource, Read and Write from/to external Datasource 
+4. *User management:* Change profile, Change password
+**(lowest priority)**
 
-4. Connection to external data sources should be possible.
-
-5. Users should be able to generate code from the platform to produce a runnable application.
-
-6. CI/CD should be possible from the platform.
-
-7. Testing of the application should be possible from the platform.
-
-## Non-functional Requirements
+### Non-functional Requirements
 1. *Ease of use:*  The platform should be easy to use for both non-technical and technical users. The platform should have a drag-and-drop interface with various supported components, templates.
 2. *Reliability:* The platform should be reliable and available 24/7: load balancing, etc.
 3. *Security:* The platform protects users data and users datasource from unauthorized access, modification or destruction: role-based access control, data encryption, and intrusion detection.
-4. *Scalability*: The platform should be able to scale to handle increasing numbers of users and workloads
+4. *Performance:* response time of system for each request is from ~200ms to ~2s
 
-# Usecase
-## Diagram
+## Usecase Diagram
+
 [Usecase Diagram](https://drive.google.com/file/d/1v7eiw8cQHYVr5MXE9QcOIMr9TU7ZAD1Y/view?usp=sharing)
-## Usecase list
-1. *Authentication:* Sign in, Sign up, Logout, ForgotPassword
-2. *Account Management:* 
-3. *Project Management:* Create a project, Edit a project, DnD interaction, Create and Edit Business Logics, Search and Filter, Customize components, Test project, Deploy Project, Invite collaborator, (*optional*) Debug
-4. *Datasource Connection:* Connect to external datasource and Make queries
-### Detail usecase for user 
-**Scenario Available**
-1. User can sign-up/sign-in into platform by username,password or by third provider.
-2. User can create a project from scratch or from templates provided
-3. User can edit a project through dnd interface
-4. User can customize components in edit view
-5. User can connect to variety of external data sources and make the queries
-6. User can create and edit business logics then apply into the project
-7. From development stage, user can be able to release a version of a product in staging stage or production stage (generate code to produce a runnable application.)
-    - *Optional:* User can debug the application
 
-**Not Yet from Requirement to Scenario**
-- CI/CD should be possible from the platform.
-## Use-case Scenario
-### Sign-in
+### Usecase list
+1. User signs up and signs in to use platform
+2. User creates a project from scratch or from templates provided
+3. User changes profile and passwords *(lowest priority)*
+3. User invites collaborators to edit the project
+5. User finds project by name or filters
+3. User edits a project through dnd interface
+4. User customizes components in edit view
+5. User maps data and connects to variety of external data sources and make the queries
+6. User creates and edits business logics then apply into the project
+8. User creates savepoints (version) for the project
+8. User tests runnable application
+7. From production stage, user be able to release a version of a product
+
+## Usecase Scenario
+
+### Sign in
 | **Usecase**  | Sign-in |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
@@ -54,11 +47,11 @@
 | **Pre-condition** | User has internet access <br/> Platform is working normally |
 | **Post-condition** | User logs in successfully into platform |
 | **Normal Flow** | 1. User enters username and password and click button 'Sign in' <br/> 2. System checks the information provided <br/> 3. System sends notification informing successfully login the redirect to workspace page of user <br/>  *Usecase ends*   |
-| **Alternative Flow** | 1.1 User don't choose sign in by username and password but click button sign in by the third provider <br/> 1.2 System redirects to the authentication page of the third provider <br/> 1.3 User provides authentication information <br/> 1.4 Third provider checks information received and allow access <br/> *Usecase continues at step 4* |
-| **Exception Flow** | 3.1 System sends notification that the information provided is wrong or not existed <br/> 3.2 User chooses login again <br/> *Usecase continues at step1* <br/>3.2.1 User chooses forgot password <br/> *Usecase continues at ...*  <br/> 3.2.2 User cancels the sign in phase <br/> *Usecase ends*|
+| **Alternative Flow** | 1.1 User don't choose sign in by username and password but click button sign in by the third provider <br/> 1.2 System redirects to the authentication page of the third provider <br/> 1.3 User provides authentication information <br/> 1.4 Third provider checks information received and allow access <br/> *Usecase continues at step 3* |
+| **Exception Flow** | 3.1 System sends notification that the information provided is wrong or not existed <br/> 3.2 User chooses login again <br/> *Usecase continues at step1* <br/> 3.2.1 User cancels the sign in phase <br/> *Usecase ends*|
 
 ### Sign up
-| **Usecase**  | Sign up |
+| **Usecase** | Sign up |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
 | **Description** | User creates account to use the platform|
@@ -66,144 +59,150 @@
 | **Pre-condition** | User has internet access <br/> Platform is working normally|
 | **Post-condition** |New account is created|
 | **Normal Flow** |1. User inputs information form then click 'submit' <br/> 2. System receives and creates an inactivated account <br/> 3. System sends email to user to activate account <br/> 4. User activates account <br/> 5. System activates account and redirect to login page <br/> *Usecase ends*  |
-| **Alternative Flow** | 1.1 User chooses to sign up by third party provider 1.2 System redirects to authentication page of third provider <br/> 1.3 User grants authentication to system <br/> 1.4 System takes the information received to create a account <br/> 1.5 System redirects to the main workspace of the account <br/> *Usecase ends* |
+| **Alternative Flow** | 1.1 User chooses to sign up by third party provider <br/> 1.2 System redirects to authentication page of third provider <br/> 1.3 User grants authentication to system <br/> 1.4 System takes the information received to create a account <br/> 1.5 System redirects to the main workspace of the account <br/> *Usecase ends* |
 | **Exception Flow** | If user exits at any step, *Usecase ends*  |
 
-### Invite collaborator
+### Log out 
+| **Usecase**  | Log Out |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User logs out the current account from the platform|
+| **Trigger** | User click the 'Log Out' on profile page/tab |
+| **Pre-condition** |User logged in into the platform|
+| **Post-condition** | System deletes user token/login from platform|
+| **Normal Flow** |1. User click 'Log out' button <br/> 2. System shows modal for user to confirm action <br/> 3. User chooses 'Yes' <br/> 4. System deletes user token and redirects to sign in page <br/> *Usecase ends*|
+| **Alternative Flow** | None |
+| **Exception Flow** | 3.1 User chooses 'No' <br/> 3.2 System closes the modal <br/> *Usecase ends* |
+
+### Create a project
+| **Usecase**  | Create a new project in workspace |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User creates a new project to build an application |
+| **Trigger** | In the workspace page, user clicks the 'New' button |
+| **Pre-condition** | User logged in into platform <br/> User is in workspace page |
+| **Post-condition** | A project is created and User can edit it |
+| **Normal Flow** |1. User clicks 'New' button in the workspace <br/> 2. System shows available options for new project <br/> 3. User chooses 'Blank Project' or provided template. <br/> 4. System create project and setup the template then redirect to editor. <br/> *Usecase ends*|
+| **Alternative Flow** | None |
+| **Exception Flow** | At each step, if user choose 'Close' button, *Usecase ends*. |
+
+### Edit a project
+| **Usecase**  | Edit an existed project |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User edits the project to create application |
+| **Trigger** | User goes to editor after create a new project <br/> User clicks the existed project in workspace |
+| **Pre-condition** | User is the owner or has edit role of the project |
+| **Post-condition** | Project is saved or updated new changes |
+| **Normal Flow** | 1. User interacts with components provided through dnd interface <br/> 2. User clicks 'Save' <br/> 3. System saves the updated project then returns to workspace view. <br/> *Usecase ends*|
+| **Alternative Flow** | 2.1 User doesn't click save button, but closes the edit view <br/> 2.2 System shows modal to make sure user's choice and whether to save the project <br/> 2.3 User chooses 'Save' button <br/> 2.4 System saves the updated project <br/> *Usecase ends*  <br/> <br/>At step 2.3: <br/> 2.3.1  User clicks 'Cancel' <br/> *Usecase continues at step 1* <br/> 2.3.a User clicks 'Don't save' <br/> 2.3.b System keeps the previous version of project <br/> *Usecase ends*|
+| **Exception Flow** | None |
+
+### Interact with components by Drag-n-Drop interface
+| **Usecase**  | Interact Drag-n-Drop interface |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User uses drag-n-drop interface to create application or business process |
+| **Trigger** | In edit view, user clicks the 'Component' tab  and click a component/business logic|
+| **Pre-condition** | User has edit role and in edit view |
+| **Post-condition** | Component/Business Logic is dropped in expected place |
+| **Normal Flow** |1. User chooses an component in component tab <br/> 2. User drags the component into the main canvas then drops at the desired place <br/> 3. System creates the component at place that user dropped at and modifies canvas<br/> *Usecase ends*|
+| **Alternative Flow** | 1.1 User chooses a created component in the main canvas <br/> *Usecase continues at step 2* <br/> <br/>At step 1.1: <br/> 1.2 User clicks 'Delete' button in Customize Tab <br/> 1.3 System deleted the component and modifies the canvas <br/> *Usecase continues at step 1* |
+| **Exception Flow** | None |
+
+### Customize a component
+| **Usecase**  | Customize a component in project |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User customizes the provided component to use in project |
+| **Trigger** | User clicks a component in the canvas |
+| **Pre-condition** | User is in editor of a project |
+| **Post-condition** | Component is updated in project based on user config |
+| **Normal Flow** | 1. User chooses what to config in customize tab: color, name, event, ... <br/> 2. System changes to config view of each type <br/> 3. User customizes the component through a click-based UI and click 'Save' <br/> 4. System updates the component UI based on configuration and modifies the main canvas <br/> *Usecase ends*|
+| **Alternative Flow** | 3.1 User can use code-based config by JS, ... and click 'Save'<br/> *Usecase continues at step 4* |
+| **Exception Flow** | None |
+
+### Invite collaborators
 | **Usecase**  | Invite collaborators |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** |User invites collaborators to edit a project|
-| **Trigger** | Click 'invite collaborator' in the edit view <br/> |
-| **Pre-condition** | User is the owner of the project |
-| **Post-condition** | System send collaborate invitation to the email user input|
-| **Normal Flow** | 1. User clicks 'invite collaborators'  <br/> 2. System shows the input form <br/> 3. User inputs emails and their role and edit, view access <br/> 4. System setups and send invitation to emails <br/> *Usecase ends* |
+| **Description** | User can invite collaborators to edit project |
+| **Trigger** | User clicks 'Invite Collaborator' in settings project tab |
+| **Pre-condition** | Collaborator has account of platform <br/> User is the owner of project |
+| **Post-condition** | System sends collaborate invitation to whom user invited |
+| **Normal Flow** | 1. User clicks 'invite collaborators' <br/> 2. System shows the input form <br/> 3. User inputs emails and their role and edit, view access <br/> 4. System setups and send invitation to emails <br/> *Usecase ends* |
 | **Alternative Flow** | None |
 | **Exception Flow** | If user exits at any step, *Usecase ends* |
 
-### Search and Filter existed project
-| **Usecase**  | Search project |
+### Search projects
+| **Usecase**  | Search a project by name or filter |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** | User searches project in the workspace|
-| **Trigger** | Click the input of search bar in workspace|
-| **Pre-condition** | User logged in into system|
-| **Post-condition** | System shows projects that matches the information user provides|
-| **Normal Flow** |1. User clicks the search bar <br/> 2. User inputs the name of project <br/> 3. System shows list of projects that are exact match or near match <br/> *Usecase ends*|
-| **Alternative Flow** | 3.1 System shows notification if there isn't any project that meets the search query <br/> *Uscase continues at step 2*|
-| **Exception Flow** ||
+| **Description** | User searches project in the workspace |
+| **Trigger** | User clicks the search bar in the workspace |
+| **Pre-condition** | User logged in into platform <br/> There are existing projects user created or has collaborator role |
+| **Post-condition** | System shows projects that matches the information user provides |
+| **Normal Flow** | 1. User clicks the search bar <br/> 2. User inputs the name of project <br/> 3. System shows list of projects that are exact match or near match <br/> *Usecase ends* |
+| **Alternative Flow** | 1.2 User clicks the filter icon to the right of the search bar <br/> 1.3 System shows filter options form <br/> 1.3 User ticks the filter options <br/> *Usecase continues at step 3* |
+| **Exception Flow** | At any steps, if user clicks outside the search bar <br/> *Usecase ends*|
 
-----
-| **Usecase**  | Filter project |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | User filters project in the workspace|
-| **Trigger** | Click the filter icon to the right of search bar in workspace|
-| **Pre-condition** | User logged in into system|
-| **Post-condition** |System shows projects that matches the information user provides|
-| **Normal Flow** |1. User clicks filter icon near the search bar <br/> 2. User inputs requirements based on form system provides <br/> 3. System shows list of projects that meet the requirements <br/> *Usecase ends*|
-| **Alternative Flow** ||
-| **Exception Flow** ||
-### Create new project
-| **Usecase**  | Create new Project |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | User creates a new project |
-| **Trigger** | When in the workspace, click the 'New' button then choose create new project |
-| **Pre-condition** | User signs in successfully |
-| **Post-condition** | User creates a project and go to edit project page |
-| **Normal Flow** |1. User clicks 'New' button in the workspace and system shows available options <br/> 2. User choose 'Blank Project'. <br/> 3. System create project and setup the template then redirect to editor. <br/> *Usecase ends*|
-| **Alternative Flow** |2.1 User can change to template tab to change a template provided. <br/> *Usecase continue at step 3*|
-| **Exception Flow** |At each step, if user choose 'Close' button, *Usecase ends*.|
-### Edit Project
-| **Usecase**  | Edit a project in user workspace |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** |User edits project to render the application|
-| **Trigger** | User chooses create new project or selects project that has been saved in the workspace|
-| **Pre-condition** |User is an owner or a collaborators of the project (has edit role)|
-| **Post-condition** |Project is updated and saved|
-| **Normal Flow** |1. User interacts with components provided through dnd interface <br/> 2. User clicks 'Save' <br/> 3. System saves the updated project then returns to workspace view. <br/> *Usecase ends* |
-| **Alternative Flow** |2.1 User doesn't click save button, but closes the edit view <br/> 2.2 System shows modal to make sure user's choice. <br/> 2.3 User clicks 'Save the changes' <br/> 2.4 System saves the updated project. <br/> *Usecase ends* <br/> 2.3.1 User clicks 'Cancel' <br/> *Usecase continue at step 1* <br/> 2.3.2 User clicks 'Don't save' <br/> 2.3.3 System keep the previous version of project <br/> *Usecase ends* |
-| **Exception Flow** |None|
 
----
-| **Usecase**  | Interact with Dnd Interface |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** |User uses dnd interface to complete their project|
-| **Trigger** | At edit view, User click at 'Component' tab.|
-| **Pre-condition** |User is editing a project|
-| **Post-condition** |Component is placed in edit view|
-| **Normal Flow** |1. User choose 'component' and choose what type of component <br/> 2. User drags the component into the main view then drops at the right place <br/> 3. System modify the component at place that user dropped at <br/> *Usecase ends*|
-| **Alternative Flow** |1.1 User clicks the created component in the main view <br/> 1.2 User drags the component <br/> *Usecase continue at step 2* <br/> 1.2.1 User clicks delete the component <br/> *Usecase continues at step 3*
-| **Exception Flow** |*At each step, user closes the edit view, return to Usecase Edit Project - step 2.2*|
-
-### Customize the Component
-| **Usecase**  | Customize the Component in edit view |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | In editing phase, user can customize the component provided that used in the production |
-| **Trigger** | User clicks the component that is dnd in the main view |
-| **Pre-condition** | User is in the edit view |
-| **Post-condition** | Component is updated based on config user provides |
-| **Normal Flow** | 1. User chooses config the component: name, UI, event, ... <br/> 2. System changes to config view <br/> 3. User customize the components through a click-based UI and click 'Save' <br/> 4. System updates the component UI based on configuration <br/> *Usecase ends*|
-| **Alternative Flow** |3.1 User can use code-based config by JS, ... and click 'Save'<br/> *Usecase continues at step 4*|
-| **Exception Flow** | None |
-### Data mapping to External Data source
-| **Usecase**  | Data mapping to external datasource |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | User can create entity in the project and read/write data from/to external datasource|
-| **Trigger** | User clicks 'create and mapping entity' in the project|
-| **Pre-condition** | User has datasource and can provide access config <br/> User is in a project or workspace. |
-| **Post-condition** | System can access to data source and can CRUD based on authority allowed |
-| **Normal Flow** |1. User creates entities and their relationships through a low-code UI of system <br/> 2. System shows a modal for user to choose datasource <br/> 3. User choose a datasource <br/> 4. System shows a form of datasouce config  <br/> 5. User provides config and grant access to system <br/>6. System alerts connect successfully and provide form for user to define datatype from external datasource <br/> 7. User defines datatype <br/> 8. System provides space for user to define mapping to entities <br/> 9. System does the mapping and saves <br/> *Usecase ends*|
-| **Alternative Flow** |5.1 System can't make connection <br/> 5.2 System returns to the config view <br/> *Usecase continues at step 5* |
-| **Exception Flow** | None |
-### Create and Edit Business Process
-| **Usecase**  | Create and Edit a Business Process |
+### Create and Edit Business Process 
+| **Usecase**  | Create and Edit a business process to apply in application |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
 | **Description** | User defines and applies business process into the product |
-| **Trigger** | User clicks tab create an business process in workspace<br/> User is in DnD editor and wants to add business process to a component <br/> |
-| **Pre-condition** |User is in workspace and click tab create an business process <br/> User is in component config then clicks add business process |
-| **Post-condition** | System saves or updates the process business or adds the business process to the component <br/>|
-| **Normal Flow** | 1. User clicks a blank business process or an existing business process <br/> 2. System brings user to another DnD edit view. <br/> 3. User chooses provided components/node about business logic and dnd into the dashboard <br/> 3. User click 'save' button <br/>4. System updates and saves the changes <br/> *Usecase ends*|
-| **Alternative Flow** |3.1 User doesn't click save button, but closes the edit view <br/> 3.2 System shows modal to make sure user's choice. <br/> 3.3 User clicks 'Save the changes' <br/> 3.4 System saves the updated business logic. <br/> *Usecase ends* <br/> 3.3.1 User clicks 'Cancel' <br/> *Usecase continue at step 3* <br/> 3.3.2 User clicks 'Don't save' <br/> 3.3.3 System keep the previous version of project <br/> *Usecase ends*|
-| **Exception Flow** | At any step, if user loses internet access, system saves and updates the latest change <br/> *Usecase ends*|
-
-### Deploy application
-| **Usecase**  | Generate a runnable application |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | From the development stage of the product, user can decide to deploy it|
-| **Trigger** | User clicks the 'deployment' button in edit view.|
-| **Pre-condition** | User has a developed product and in the edit view.|
-| **Post-condition** | User can use deployed application|
-| **Normal Flow** | 1. In the edit view in development stage, user click 'deploy' button <br/> 2. System shows up a config view for user <br/> 3. User choose 'production' and input version information <br/> 4. System prepares the app and enable the 'deploy' button <br/> 5. User click the button <br/> 6. System opens the application in the new window. <br/> *Usecase ends*|
-| **Alternative Flow** | None |
-| **Exception Flow** | None |
----
-| **Usecase**  | Test runnable of the application  |
-|:---|:---|
-| **Actor** | User (Nontechnical or technical user) |
-| **Description** | In the preview mode, user can test the functionality of the app |
-| **Trigger** | In the edit view, click the 'Preview' button|
-| **Pre-condition** | User has a developed product and in the edit view.  |
-| **Post-condition** ||
-| **Normal Flow** | 1. At the preview mode, user as an end-user of the application uses the product <br/> 2. System provides the flow of each functionality at the bottom of the mode <br/> 3. User checks the flow <br/> *Usecase ends* |
-| **Alternative Flow** | None |
+| **Trigger** | User clicks 'Add business process' in Customize Tab when customize component <br/> User clicks a business process in business customize tab in workspace |
+| **Pre-condition** | User logged in and in customize view or in main workspace |
+| **Post-condition** | Business process is created and added by system |
+| **Normal Flow** | 1. User clicks a blank business process or an existing business process <br/> 2. System brings user to another drag-n-drop edit view. <br/> 3. User chooses provided components/node about business logic and drag-n-drop into the dashboard <br/> 4. User click 'save' button <br/>5. System updates and saves the changes <br/> *Usecase ends* |
+| **Alternative Flow** | 5.1 If user triggers in customize view, system adds the business process to targeted component. <br/> *Usecase ends* <br/> <br/> At step 4: <br/> 4.1 User doesn't click save button, but closes the edit view <br/> 4.2 System shows modal to make sure user's choice and whether to save the business project <br/> 4.3 User chooses 'Save' button <br/> 4.4 System saves the updated business process <br/> *Usecase ends*  <br/> <br/>At step 4.3: <br/> 4.3.1  User clicks 'Cancel' <br/> *Usecase continues at step 3* <br/> 4.3.a User clicks 'Don't save' <br/> 4.3.b System keeps the previous version of project <br/> *Usecase ends* |
 | **Exception Flow** | None |
 
----
-| **Usecase**  | Debug the application |
+### Data mapping to External Datasource
+| **Usecase**  | Mapping data entities to external datasource |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
-| **Description** |In the preview mode, user can test the functionality of the app|
-| **Trigger** |In the edit view, click the 'Preview' button|
-| **Pre-condition** |User has a developed product and in the edit view and User is in preview mode.|
-| **Post-condition** |User can test the application or find the error|
-| **Normal Flow** | 1. At the test-flow view, user change the mode to 'steps by steps' <br/> 2. User chooses which part to inspect <br/> 3. After user triggers the function, system provides detail data flow through each step then stop <br/> 4. User click the button 'run next' <br/> 5. System stops the test when passing all steps <br/> *Usecase ends*|
-| **Alternative Flow** | 1.1 User can choose what step to stop <br/> 1.2 System runs until meeting the breakpoint <br/> *Usecase continues at step 4* <br/> 3.1 System raises the errors then disable 'run next' button <br/> *Usecase ends*| 
+| **Description** | Create data entities in project and mapping them to data from external datasource |
+| **Trigger** | User clicks 'create and mapping entity' in the editor or in the main workspace|
+| **Pre-condition** |User has datasource and can provide access config <br/> User is in a project or workspace|
+| **Post-condition** | System can access to data source and can CRUD data to destination (data entities) based on authority allowed  |
+| **Normal Flow** | 1. User creates entities and their relationships through a low-code UI of system <br/> 2. System shows a modal for user to choose datasource <br/> 3. User choose a datasource <br/> 4. System shows a form of datasouce config  <br/> 5. User provides config and grant access to system <br/>6. System alerts connect successfully and provide form for user to define datatype from external datasource <br/> 7. User defines datatype <br/> 8. System provides space for user to define mapping to entities <br/> 9. System does the mapping and saves <br/> *Usecase ends* |
+| **Alternative Flow** | 5.1 System can't make connection <br/> 5.2 System returns to the config view <br/> *Usecase continues at step 5* |
+| **Exception Flow** | None |
+
+### Version control 
+| **Usecase**  | User can control the version of the application |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User creates version in each stage of product creation process|
+| **Trigger** | User click stage and version options  on tab when in project editor |
+| **Pre-condition** | User is in project editor |
+| **Post-condition** | User can create a version for  changes of project|
+| **Normal Flow** | 1. User click stage and version options <br/> 2. System shows a form for user input <br/> 3. User chooses stage of application and click 'add new version' <br/> 4. User inputs name of version and description then click 'Add' <br/> 5. System creates a new version from savepoint of the version user is standing on <br/> *Usecase ends* |
+| **Alternative Flow** | None |
+| **Exception Flow** | None |
+
+### Test application
+| **Usecase**  | Test the flow of application |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User can test application when in staging stage |
+| **Trigger** | User changes stage to staging on tab when in project editor|
+| **Pre-condition** | User is in project editor <br/> User has testing plan |
+| **Post-condition** | User can check if the application running appropriately|
+| **Normal Flow** | 1. User changes stage to staging and chooses the version to test <br/> 2. System sets up environment and deploys the product in staging mode <br/> 3. User tests application as plan <br/> *Usecase ends* |
+| **Alternative Flow** | None |
+| **Exception Flow** | None |
+
+### Deploy an application
+| **Usecase**  | Generate an runnable application |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | From the development stage of the product, user can decide to deploy it |
+| **Trigger** | Click the deploy button when user is in production stage |
+| **Pre-condition** | User has a ready application stored in platform <br/> User is the owner of the application |
+| **Post-condition** | System deploys the application on to server |
+| **Normal Flow** | 1. In the view in production stage, user click 'deploy' button <br/> 2. System shows up a config view for user <br/> 3. User inputs version and description <br/> 4. System prepares the app and deploy it onto server <br/> 5. System opens the application in the new window <br/> *Usecase ends*|
+| **Alternative Flow** | None |
 | **Exception Flow** | None |
