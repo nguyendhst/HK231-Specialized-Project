@@ -18,6 +18,12 @@ Business Process is a set of related, structured activities that are performed i
 - Access Request
 ### Hospital:
 - Patient Lifecycle Tracking
+### CRM Activites:
+- Store and manage contact data
+- Customer deal tracking
+- Contact with customersw
+- Ticket automatic respond
+- Task automation
 
 # Business Logics
 Inside each Business Process are set of Business Logics that are run either in sequence or in parallel. Generally, our project should provide some basic actions so that the user will not necessarily have to define again.
@@ -44,4 +50,4 @@ Inside each Business Process are set of Business Logics that are run either in s
 ### Analytics
 - Give analytics of a specific entity in database
 
-In addition, the app should allow users to define new business logics. And for clarity, there should be a separation between Business Logics and Application Logics.
+In addition, the app should allow users to define new business logics or integrate with a third-party plugin (such as Gmail, Outlook, etc). And for clarity, there should be a separation between Business Logics and Application Logics.
