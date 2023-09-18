@@ -1,10 +1,6 @@
 # Business Processes
-## Definition
 Business Process is a set of related, structured activities that are performed in a specific sequence in an organizational and technical environment with the goal of serving a particular business goal. These processes may or may not be visible to the customers.
-## Enterprise Resource Planning (ERP)
-Enterprise Resource Planning or ERP systems are programs that are used by companies to integrate and coordinate information in every aspect of business. ERP softwares help business processes to operate efficiently by integrating tasks related to sales, marketing, manufacturing, logistics, accounting and staffing through out a business.
 
-> Considering removing this
 ## Example of Business Processes
 ### Finance:
 - Employee Expense Claim
@@ -27,18 +23,25 @@ Enterprise Resource Planning or ERP systems are programs that are used by compan
 Inside each Business Process are set of Business Logics that are run either in sequence or in parallel. Generally, our project should provide some basic actions so that the user will not necessarily have to define again.
 ## Example of Business Logics
 ### Users Account
-- Sign Up
-- Sign In / Sign Out
-- Sign In with an existing social network account
+- User sign-up
+- User sign-in
 - Update user's credential details
-- Send confirmation emails
-- Send password reset emails
 ### App Navigation
-- Go back Home
-- Go to another screen
-- Go back to the previous screen
+- Choose what to display for the user
+### Workflow Trigger
+- Trigger specific workflow on condition check
+### Data Validation
+- Validate form input from users
+- Validate data from users with database
+### Calculation
+- Apply discount on item price
+### Transaction
+- Verify transaction status
+- Rollback transaction on error
+- Authenticate transactions
 ### Notification
-- Send email notifications
-- Send mobile push notifications
+- Send notifications to users
 ### Analytics
-### Custom Logics
+- Give analytics of a specific entity in database
+
+In addition, the app should allow users to define new business logics. And for clarity, there should be a separation between Business Logics and Application Logics.
