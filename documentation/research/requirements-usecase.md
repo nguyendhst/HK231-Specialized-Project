@@ -7,7 +7,7 @@
 ## Requirements:
 ### Functional Requirements
 1. *Authentication:* Sign in, Sign up, Log out
-2. *Project Management:* Create and Edit project, Create and Edit Business Management, Search and Filter Project, DnD UI, Code-based component customization, Invite Collaborators, **Test application, Deploy Project**
+2. *Project Management:* Create and Edit project, Create and Edit Business Management, Search and Filter Project, DnD UI, Code-based component customization, Invite Collaborators, Test application, Deploy Application
 3. *Data mapping:* Create Data Entities, Connect and to External Datasource, Read and Write from/to external Datasource 
 4. *User management:* Change profile, Change password
 **(lowest priority)**
@@ -32,7 +32,7 @@
 4. User customizes components in edit view
 5. User maps data and connects to variety of external data sources and make the queries
 6. User creates and edits business logics then apply into the project
-8. User creates savepoints (version) for the project
+8. User creates savepoints (version) for the project *(Optional)*
 8. User tests runnable application
 7. From production stage, user be able to release a version of a product
 
@@ -46,8 +46,8 @@
 | **Trigger** | User accesses the platform's link |
 | **Pre-condition** | User has internet access <br/> Platform is working normally |
 | **Post-condition** | User logs in successfully into platform |
-| **Normal Flow** | 1. User enters username and password and click button 'Sign in' <br/> 2. System checks the information provided <br/> 3. System sends notification informing successfully login the redirect to workspace page of user <br/>  *Usecase ends*   |
-| **Alternative Flow** | 1.1 User don't choose sign in by username and password but click button sign in by the third provider <br/> 1.2 System redirects to the authentication page of the third provider <br/> 1.3 User provides authentication information <br/> 1.4 Third provider checks information received and allow access <br/> *Usecase continues at step 3* |
+| **Normal Flow** | 1. User clicks the third provider icon <br/> 2. System redirects to the authentication page of the third provider <br/> 3. User provides authentication information <br/> 4. Third provider checks information received and allow access <br/> System takes information for checking and redirect to main workspace page <br/> *Usecase ends*|
+| **Alternative Flow** | None |
 | **Exception Flow** | 3.1 System sends notification that the information provided is wrong or not existed <br/> 3.2 User chooses login again <br/> *Usecase continues at step1* <br/> 3.2.1 User cancels the sign in phase <br/> *Usecase ends*|
 
 ### Sign up
@@ -58,8 +58,8 @@
 | **Trigger** | At the login page, click button 'Sign up' <br/> Click the link sent in mail when user is invited to use|
 | **Pre-condition** | User has internet access <br/> Platform is working normally|
 | **Post-condition** |New account is created|
-| **Normal Flow** |1. User inputs information form then click 'submit' <br/> 2. System receives and creates an inactivated account <br/> 3. System sends email to user to activate account <br/> 4. User activates account <br/> 5. System activates account and redirect to login page <br/> *Usecase ends*  |
-| **Alternative Flow** | 1.1 User chooses to sign up by third party provider <br/> 1.2 System redirects to authentication page of third provider <br/> 1.3 User grants authentication to system <br/> 1.4 System takes the information received to create a account <br/> 1.5 System redirects to the main workspace of the account <br/> *Usecase ends* |
+| **Normal Flow** | 1. User chooses to sign up by third party provider <br/> 2. System redirects to authentication page of third provider <br/> 3. User grants authentication to system <br/> 4. System takes the information received to create a account <br/> 5. System redirects to the main workspace of the account <br/> *Usecase ends*|
+| **Alternative Flow** | None |
 | **Exception Flow** | If user exits at any step, *Usecase ends*  |
 
 ### Log out 
@@ -171,7 +171,7 @@
 | **Alternative Flow** | 5.1 System can't make connection <br/> 5.2 System returns to the config view <br/> *Usecase continues at step 5* |
 | **Exception Flow** | None |
 
-### Version control 
+### Version control (Optional)
 | **Usecase**  | User can control the version of the application |
 |:---|:---|
 | **Actor** | User (Nontechnical or technical user) |
