@@ -42,7 +42,7 @@ jobs:
                   cd sp-report
                   rsync -av --progress ../documentation/report/* ./content --exclude images
                   cp ../documentation/report/images/* ./static/images/
-                  hugo --minify --theme hugo-book
+                  hugo --minify --theme hugo-book --baseURL "HK231-Specialized-Project"
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
