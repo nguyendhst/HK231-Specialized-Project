@@ -40,7 +40,7 @@ jobs:
             - name: Build
               run: |
                   cd sp-report
-                  cp ../documentation/report/* ./content
+                  rsync -av --progress ../documentation/report/* ./content --exclude images
                   cp ../documentation/report/images/* ./static/images/
                   hugo --minify --theme hugo-book
 
