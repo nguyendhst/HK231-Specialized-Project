@@ -1,0 +1,18 @@
+baseURL = 'http://127.0.0.1:5500/'
+languageCode = 'en-us'
+theme = 'hugo-book'
+title = 'Project Report'
+description = 'Sem231 Specialized Project'
+
+# Needed for mermaid/katex shortcodes
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 1
+
+[params]
+  BookToC = true
+  BookSection = '*'
+  
