@@ -27,6 +27,52 @@ The project will be divided into multiple iterations, which will have a duration
 
 Task management is done using GitHub Projects. The project is divided into multiple iterations, each of which is represented by a GitHub Project board. Each iteration board is divided into 4 columns: `To do`, `In progress`, `Review`, and `Done`. Each task is represented by a GitHub Issue, which is then added to the corresponding column on the board. The team members will then move the tasks between the columns as they progress through the iteration.
 
+### Project Planning and Scheduling
+
+#### Project Timeline
+
+The project begins from 11/09/2023 and is expect to lasts 15 weeks until 19/12/2023.
+
+Two major milestones are set for the project:
+- Prototype release: 08/10/2023
+	- The prototype release is the first release showcasing key features of the project. The prototype release will include:
+		- A web application that allows users to create and manage their projects.
+		- Visual DnD Editor that allows users to visually model their projects.
+
+- Version 0.1.0 release: 05/11/2023
+    - The version 0.1.0 release is the first release of the project that can be evaluated by users. The version 0.1 release will include:
+		- Fully functional visual DnD editor.
+		- Workflow UI that allows users to create and manage their workflows.
+		- Application deployment to a cloud service provider.
+		- User authentication and authorization.
+
+- MVP release: 11/12/2023
+	- The MVP release is the final release of the project. The MVP release will include:
+		- Fully functional visual DnD editor.
+		- Workflow DnD Editor that allows users to visually model their workflows.
+		- Business Logic Execution Engine that allows users to execute their workflows.
+
+{{< mermaid >}}
+gantt
+	dateFormat  YYYY-MM-DD
+	title       Project Timeline
+	axisFormat  %m/%d
+	section Requirement Analysis
+		Requirement Analysis: 2023-08-28, 2023-09-11
+	section System Design
+		System Design: 2023-09-11, 2023-09-26
+	section Implementation
+		Implementation: 2023-09-26, 2023-12-10
+		v0.0.1 Prototype Release: milestone, 2023-10-08, 0d
+		Version v0.1.0: milestone, 2023-11-05, 0d
+		MVP Release: milestone, 2023-12-11, 0d
+	section Documentation
+		Requirment Analysis: 2023-08-28, 2023-09-11
+		System Design: 2023-09-11, 2023-09-26
+		Technical Documentation: 2023-09-26, 2023-12-03
+		Concluding Report: 2023-12-03, 2023-12-10
+{{< /mermaid >}}
+
 ### Version Control
 
 Version control of the project is done using Git and GitHub. The project repository is hosted on GitHub and is accessible at [link](https://github.com/users/nguyendhst/projects/1). 
