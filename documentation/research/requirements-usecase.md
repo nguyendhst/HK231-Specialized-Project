@@ -14,7 +14,8 @@
 
 ### Non-functional Requirements
 1. *Ease of use:*  The platform should be easy to use for both non-technical and technical users. The platform should have a drag-and-drop interface with various supported components, templates.
-2. *Reliability:* The platform should be reliable and available 24/7: load balancing, etc.
+2. *Reliability:* 
+Downtime must be ...
 3. *Security:* The platform protects users data and users datasource from unauthorized access, modification or destruction: role-based access control, data encryption, and intrusion detection.
 4. *Performance:* response time of system for each request is from ~200ms to ~2s
 
