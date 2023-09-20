@@ -39,8 +39,8 @@ Two major milestones are set for the project:
 		- A web application that allows users to create and manage their projects.
 		- Visual DnD Editor that allows users to visually model their projects.
 
-- Version 0.1 release: 05/11/2023
-    - The version 0.1 release is the first release of the project that is ready for production. The version 0.1 release will include:
+- Version 0.1.0 release: 05/11/2023
+    - The version 0.1.0 release is the first release of the project that can be evaluated by users. The version 0.1 release will include:
 		- Fully functional visual DnD editor.
 		- Workflow UI that allows users to create and manage their workflows.
 		- Application deployment to a cloud service provider.
@@ -63,8 +63,8 @@ gantt
 		System Design: 2023-09-11, 2023-09-26
 	section Implementation
 		Implementation: 2023-09-26, 2023-12-10
-		Prototype Release: milestone, 2023-10-08, 0d
-		version v0.1: milestone, 2023-11-05, 0d
+		v0.0.1 Prototype Release: milestone, 2023-10-08, 0d
+		Version v0.1.0: milestone, 2023-11-05, 0d
 		MVP Release: milestone, 2023-12-11, 0d
 	section Documentation
 		Requirment Analysis: 2023-08-28, 2023-09-11
