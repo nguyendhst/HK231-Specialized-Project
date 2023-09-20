@@ -12,6 +12,4 @@
 
 [VI. Implementation](/HK231-Specialized-Project/implementation)
 
-[VIII. Project Management](/HK231-Specialized-Project/project-management)
-
-To be continued...
+[VII. Conclusion](/HK231-Specialized-Project/conclusion)
