@@ -27,7 +27,7 @@ The project will be divided into multiple iterations, which will have a duration
 
 Task management is done using GitHub Projects. The project is divided into multiple iterations, each of which is represented by a GitHub Project board. Each iteration board is divided into 4 columns: `To do`, `In progress`, `Review`, and `Done`. Each task is represented by a GitHub Issue, which is then added to the corresponding column on the board. The team members will then move the tasks between the columns as they progress through the iteration.
 
-![ProjectTimeline](./images/github-project-timeline.png)
+![ProjectTimeline](/images/github-project-timeline.png)
 ### Project Planning and Scheduling
 
 #### Project Timeline
