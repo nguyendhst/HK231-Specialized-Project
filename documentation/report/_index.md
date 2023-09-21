@@ -1,15 +1,15 @@
 # Table Of Contents
 
-[I. Introduction](/HK231-Specialized-Project/introduction)
+[I. Introduction](/introduction)
 
-[II. Literature Review](/HK231-Specialized-Project/literature-review)
+[II. Literature Review](/literature-review)
 
-[III. Methodology](/HK231-Specialized-Project/methodology)
+[III. Methodology](/methodology)
 
-[IV. Requirement Analysis](/HK231-Specialized-Project/requirement-analysis)
+[IV. Requirement Analysis](/requirement-analysis)
 
-[V. System Design](/HK231-Specialized-Project/system-design)
+[V. System Design](/system-design)
 
-[VI. Implementation](/HK231-Specialized-Project/implementation)
+[VI. Implementation](/implementation)
 
-[VII. Conclusion](/HK231-Specialized-Project/conclusion)
+[VII. Conclusion](/conclusion)
