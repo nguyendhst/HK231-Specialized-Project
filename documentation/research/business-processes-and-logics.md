@@ -23,7 +23,7 @@ Business Process is a set of related, structured activities that are performed i
 - Customer deal tracking
 - Contact with customersw
 - Ticket automatic respond
-- Task automation
+- Dashboard management
 
 # Business Logics
 Inside each Business Process are set of Business Logics that are run either in sequence or in parallel. Generally, our project should provide some basic actions so that the user will not necessarily have to define again.
