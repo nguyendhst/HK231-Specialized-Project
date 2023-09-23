@@ -11,7 +11,6 @@
 
 ## High-Level Architecture
 
-### Workflow
 ### Architectural Style
 
 Arcchitecture style is the fundamental structural design of a software system. It consists of a set of patterns and principles used to define the system's components, their interactions, and the constraints that guide their design and evolution. [<sup>1</sup>](https://en.wikipedia.org/wiki/Software_architecture)
@@ -107,8 +106,8 @@ These microservices can communicate with each other using well-defined APIs and 
 By adopting a microservices architecture, the low-code platform can benefit from modularity, scalability, independent development and deployment, and the ability to incorporate new functionalities or services without affecting the entire system.
 
 ### System Context Diagram
-### Container Diagram
-### Component Diagram
-### Deployment Diagram
 
+![system-context](./images/context.svg)
+### Container Diagram
+![container](./images/container.svg)
 ## References
