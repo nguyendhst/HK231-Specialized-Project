@@ -77,27 +77,27 @@ Using **Microservices architecture** combined with elements from **Event-driven 
 
 ### Key Components
 
-- **User Management Microservice:**
+- **User Management:**
 
 	- This microservice handles user authentication, registration, profile management, and access control.
 
 	- It provides APIs for user-related operations, such as user creation, authentication, and updating user profiles.
 
-- **Project Management Microservice:**
+- **Project Management:**
 
 	- This microservice is responsible for managing user projects within the platform.
 	- It handles operations like creating, updating, and deleting projects, as well as retrieving project information.
 	- It provides APIs for project management, such as project creation, retrieval, and modification.
 
-- **Application Deployment Microservice:**
+- **Application Deployment Engine:**
 
-	- This microservice focuses on deploying the web applications created by users within the platform.
+	- This component focuses on deploying the web applications created by users within the platform.
 	- It receives the application models, validates them, and handles the deployment process.
 	- It may interact with other microservices to ensure the availability of necessary resources for the deployed applications.
 
-- **Business Logic Execution Microservice:**
+- **Business Logic Execution Engine:**
 
-	- This microservice is responsible for executing the business logic defined by users within their applications.
+	- This component is responsible for executing the business logic defined by users within their applications.
 	- It receives the user-defined logic, which can be in the form of scripts, rules, workflows, or other configurations.
 	- It executes the logic based on the runtime context and provides the necessary data and services to support the execution.
 
@@ -107,7 +107,7 @@ By adopting a microservices architecture, the low-code platform can benefit from
 
 ### System Context Diagram
 
-![system-context](./images/context.svg)
+![system-context](/images/context.svg)
 ### Container Diagram
-![container](./images/container.svg)
+![container](/images/container.svg)
 ## References
