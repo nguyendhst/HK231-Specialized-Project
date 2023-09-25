@@ -80,8 +80,17 @@ The platform provides lowcode UI or drag-n-drop interface for users to interact 
 | **Alternative Flow** | None |
 | **Exception Flow** | 3.1 System sends notification that the information provided is wrong or not existed <br/> 3.2 User chooses login again <br/> *Usecase continues at step1* <br/> 3.2.1 User cancels the sign in phase <br/> *Usecase ends*|
 
-### Edit project
-
+### Edit a project
+| **Usecase**  | Edit an existed project |
+|:---|:---|
+| **Actor** | User (Nontechnical or technical user) |
+| **Description** | User edits the project to create application |
+| **Trigger** | User goes to editor after create a new project <br/> User clicks the existed project in workspace |
+| **Pre-condition** | User is the owner or has edit role of the project |
+| **Post-condition** | Project is saved or updated new changes |
+| **Normal Flow** | 1. User interacts with components  and the main canvas: drag-n-drop, customize components, etc. <br/> 2. User clicks 'Save' <br/> 3. System saves the updated project then returns to workspace view. <br/> *Usecase ends*|
+| **Alternative Flow** | 2.1 User doesn't click save button, but closes the edit view <br/> 2.2 System shows modal to make sure user's choice and whether to save the project <br/> 2.3 User chooses 'Save' button <br/> 2.4 System saves the updated project <br/> *Usecase ends*  <br/> <br/>At step 2.3: <br/> 2.3.1  User clicks 'Cancel' <br/> *Usecase continues at step 1* <br/> 2.3.a User clicks 'Don't save' <br/> 2.3.b System keeps the previous version of project <br/> *Usecase ends*|
+| **Exception Flow** | None |
 
 ### Customize a component
 | **Usecase**  | Customize a component in project |
@@ -120,7 +129,6 @@ The platform provides lowcode UI or drag-n-drop interface for users to interact 
 | **Normal Flow** | 1. User click "Database" in the right toolbar then click "Add" button <br/> 2. System shows the modal for user to choose <br/> 3. User chooses the database and provides configuration about access and authority <br/> 4. System connects to database and retrieve data <br/> 5. System renders the data into table views with column, options box that user can interact with to view or edit model or CRUD request <br/> *Usecase ends* |
 | **Alternative Flow** | None |
 | **Exception Flow** | None |
-
 
 ### Deploy an application
 
