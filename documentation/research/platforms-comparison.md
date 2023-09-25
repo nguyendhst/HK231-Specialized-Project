@@ -70,3 +70,17 @@ Due to our financial limitation, we could not really have an insight in platform
 ### Cons
 - Limited to little connection to external data sources:
   - One drawback of the platform is its inability to connect to external data sources. Every database action must be performed under the database service given by the platform.
+
+## Platform Comparison
+To summarize, we would like to compare the three mentioned above platforms in a table. And with that in mind, we can choose which function we are implementing in our application.
+
+|                                             | ToolJet | Google AppSheet | Bubble.io |
+| ------------------------------------------- | :-----: | :-------------: | :-------: |
+| Drag-n-drop Visual Editor                   |    ✔️    |        ❌        |     ✔️     |
+| DBMS                                        |    ✔️    |        ✔️        |     ✔️     |
+| Ability to connect to external data sources |    ✔️    |        ✔️        |     ❌     |
+| Collaboration                               |    ✔️    |        ❌        |     ✔️     |
+| Workflow manager                            |    ❌    |        ✔️        |     ✔️     |
+| Customizable components                     |    ❌    |        ❌        |     ✔️     |
+| Localization                                |    ❌    |        ❌        |     ✔️     |
+| Cross-platform support                      |    ✔️    |        ✔️        |     ❌     |
