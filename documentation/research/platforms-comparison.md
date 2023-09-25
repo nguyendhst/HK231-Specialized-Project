@@ -30,7 +30,7 @@ Our candidate for this category is going to be **[ToolJet](https://github.com/To
   - Any features related to workflow are nowhere to be found in the main interface. Despite the fact that ToolJet does have a workflow editor, it is still in a beta phase and only available for paid plans.
 
 ## Proprietary, free-to-use
-For the next category which is a platform that is proprietary but free to use, we are choosing Google AppSheet, a low-code / no-code platform to build apps and automate work.
+For the next category which is a platform that is proprietary but free to use, we are choosing **[Google AppSheet](https://about.appsheet.com/home/)**, a low-code / no-code platform to build apps and automate work.
 
 ![Google Appsheet](./images/appsheet.png)
 
@@ -47,9 +47,17 @@ For the next category which is a platform that is proprietary but free to use, w
 ### Cons
 - Limited choices of components:
   - One drawback of this platform is its lack of prebuilt components comparing to other platforms. In addition, these components are not drag-n-drop. Therefore you cannot freely set positions of these components. Beside, you can only choose one component per page, which is called a View Type.
+- Limited choices of actions for app components:
+  - 
 - Limited choices of workflow actions:
   - Each step of a process is only given a small amount of actions. If you want to extends the functionality of the automation process, users would have to rely on making a custom Google AppScript script, which is a JavaScript-lookalike scriting language. This really defeats the purpose of a no-code platform as Google has stated.
   - Beside, the workflow system in Google AppSheet is pretty much limited in which they can only support simple workflow. There is no branching support in the workflow or so.
 
 ## Proprietary, paid
-Seriously I do not have the money :sob:
+Due to our financial limitation, we could not really have an insight in platforms that need to be paid in order to start using. However, we end up got suggested with a free to develop platform which is called **[Bubble.io](https://bubble.io/)**. The only catch is that to deploy the application, we need a paid account. Since our scope is focus on researching the platform main functionality, we do not need to deploy anything.
+
+![Bubble.io](./images/bubbleio.png)
+
+### Pros
+
+### Cons

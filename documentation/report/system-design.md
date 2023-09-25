@@ -11,7 +11,6 @@
 
 ## High-Level Architecture
 
-### Workflow
 ### Architectural Style
 
 Arcchitecture style is the fundamental structural design of a software system. It consists of a set of patterns and principles used to define the system's components, their interactions, and the constraints that guide their design and evolution. [<sup>1</sup>](https://en.wikipedia.org/wiki/Software_architecture)
@@ -67,53 +66,38 @@ A Microservices Architecture is an architectural method that relies on a series 
 - **Integration Capabilities**: MSA facilitates integration with external systems. Each microservice can expose its own API, allowing for easy integration with other services. However, managing these integrations can be complex [<sup>13</sup>](https://www.techtarget.com/searchapparchitecture/tip/The-ups-and-downs-of-low-code-microservices-development).
 
 
-Using a **microservices architecture**, we can address these problems by breaking down the platform into smaller, more manageable services. Each service can be developed, tested, and deployed independently, allowing for better control of the resources used by the system. This also allows for easier handling of scalability and performance, as each service can be scaled separately.
-
 However, there are some notable disadvantages:
 
 - **Increased Complexity**: Microservices can add increased complexity that leads to development sprawl, or rapid and unmanaged growth. It can be challenging to determine how different components relate to each other [<sup>14</sup>](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
 - **Debugging Challenges**: Each microservice has its own set of logs, which makes debugging more complicated. A single business process can run across multiple machines, further complicating debugging [<sup>15</sup>](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
 
-**Event-Driven Architecture:**
-
-- Implement an event-driven approach to handle interactions and communication between different components of the platform.
-- Events can be triggered when a user models an application, defines business logic, or deploys an application.
-- Event-driven architecture allows for decoupling and asynchronous processing of events, enhancing scalability and responsiveness.
-- Benefits: Loose coupling, scalability, and flexibility in handling user interactions and system events.
-
-**Stateless Client-Server Architecture:**
-
-- Implement a stateless client-server architecture where the server does not store any client state.
-- Utilize a client-server architectural pattern where the web-based user interface (web browser client) communicates with the server-side components.
-- The client interface allows users to model applications, define business logic, and interact with the platform.
-- The server-side components handle the storage, retrieval, and execution of user-defined models and application logic.
-- Benefits: Separation of concerns, easier user interaction, and centralized management of data and logic.
+Using **Microservices architecture** combined with elements from **Event-driven architecture** and **stateless client-server architecture**, the development process can be more efficient by breaking down the platform into smaller, more manageable services. Each service can be developed, tested, and deployed independently, allowing for better control of the resources used by the system. This also allows for easier handling of scalability and performance, as each service can be scaled separately.
 
 ## Architecture Diagrams
 
 ### Key Components
 
-- **User Management Microservice:**
+- **User Management:**
 
 	- This microservice handles user authentication, registration, profile management, and access control.
 
 	- It provides APIs for user-related operations, such as user creation, authentication, and updating user profiles.
 
-- **Project Management Microservice:**
+- **Project Management:**
 
 	- This microservice is responsible for managing user projects within the platform.
 	- It handles operations like creating, updating, and deleting projects, as well as retrieving project information.
 	- It provides APIs for project management, such as project creation, retrieval, and modification.
 
-- **Application Deployment Microservice:**
+- **Application Deployment Engine:**
 
-	- This microservice focuses on deploying the web applications created by users within the platform.
+	- This component focuses on deploying the web applications created by users within the platform.
 	- It receives the application models, validates them, and handles the deployment process.
 	- It may interact with other microservices to ensure the availability of necessary resources for the deployed applications.
 
-- **Business Logic Execution Microservice:**
+- **Business Logic Execution Engine:**
 
-	- This microservice is responsible for executing the business logic defined by users within their applications.
+	- This component is responsible for executing the business logic defined by users within their applications.
 	- It receives the user-defined logic, which can be in the form of scripts, rules, workflows, or other configurations.
 	- It executes the logic based on the runtime context and provides the necessary data and services to support the execution.
 
@@ -122,8 +106,8 @@ These microservices can communicate with each other using well-defined APIs and 
 By adopting a microservices architecture, the low-code platform can benefit from modularity, scalability, independent development and deployment, and the ability to incorporate new functionalities or services without affecting the entire system.
 
 ### System Context Diagram
-### Container Diagram
-### Component Diagram
-### Deployment Diagram
 
+![system-context](/images/context.svg)
+### Container Diagram
+![container](/images/container.svg)
 ## References
