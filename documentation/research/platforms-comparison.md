@@ -48,7 +48,7 @@ For the next category which is a platform that is proprietary but free to use, w
 - Limited choices of components:
   - One drawback of this platform is its lack of prebuilt components comparing to other platforms. In addition, these components are not drag-n-drop. Therefore you cannot freely set positions of these components. Beside, you can only choose one component per page, which is called a View Type.
 - Limited choices of actions for app components:
-  - 
+
 - Limited choices of workflow actions:
   - Each step of a process is only given a small amount of actions. If you want to extends the functionality of the automation process, users would have to rely on making a custom Google AppScript script, which is a JavaScript-lookalike scriting language. This really defeats the purpose of a no-code platform as Google has stated.
   - Beside, the workflow system in Google AppSheet is pretty much limited in which they can only support simple workflow. There is no branching support in the workflow or so.
@@ -59,5 +59,14 @@ Due to our financial limitation, we could not really have an insight in platform
 ![Bubble.io](./images/bubbleio.png)
 
 ### Pros
-
+- Friendly drag-n-drop interface:
+  - Bubble.io provides an easy to approach visual editor for application GUI. It also includes a large variety of prebuilt elements and an element hierarchy list. 
+- Wide variety of workflow actions:
+  - When talking about workflow handling, Bubble.io really stands out with its large amount of predefined actions for workflow handling, ranging from account management to data analytics. In addition, the UX on the workflow dashboard is better comparing to other platforms.
+- Highly configurable application style:
+  - Another Bubble.io's key point is about its ability to customize the interface and styles of the application UI. For each prebuilt components, Bubble.io provides a separate setting panel in which users and freely edit the component. 
+- Localization support:
+  - Many languages have already been supported on Bubble.io and can be applied to the application itself. There also exists a dashboard where you can edit custom error messages.
 ### Cons
+- Limited to little connection to external data sources:
+  - One drawback of the platform is its inability to connect to external data sources. Every database action must be performed under the database service given by the platform.
