@@ -17,7 +17,7 @@ Low-code Developing is slowly becoming a thing in business environment. And to k
 ### Open-source
 Our candidate for this category is going to be **[ToolJet](https://github.com/ToolJet/ToolJet)**. ToolJet is an open-source low-code framework to build and deploy internal tools with minimal engineering effort. ToolJet's drag and drop frontend builder allows you to create complex, responsive frontends within minutes. Additionally, you can integrate various data sources, including databases like PostgreSQL, MongoDB, and Elasticsearch; API endpoints with OpenAPI spec and OAuth2 support; SaaS tools such as Stripe, Slack, Google Sheets, Airtable, and Notion; as well as object storage services like S3, GCS, and Minio, to fetch and write data.
 
-![ToolJet Demo](./images/tooljet.png)
+![ToolJet Demo](/images/tooljet.png)
 
 #### Pros
 - Visual Drag-n-Drop App Builder
@@ -42,7 +42,7 @@ Our candidate for this category is going to be **[ToolJet](https://github.com/To
 ### Proprietary, free-to-use
 For the next category which is a platform that is proprietary but free to use, we are choosing **[Google AppSheet](https://about.appsheet.com/home/)**, a low-code / no-code platform to build apps and automate work.
 
-![Google Appsheet](./images/appsheet.png)
+![Google Appsheet](/images/appsheet.png)
 
 #### Pros
 - Friendly User Interface / User Experience:
@@ -66,7 +66,7 @@ For the next category which is a platform that is proprietary but free to use, w
 ### Proprietary, paid
 Due to our financial limitation, we could not really have an insight in platforms that need to be paid in order to start using. However, we end up got suggested with a free to develop platform which is called **[Bubble.io](https://bubble.io/)**. The only catch is that to deploy the application, we need a paid account. Since our scope is focus on researching the platform main functionality, we do not need to deploy anything.
 
-![Bubble.io](./images/bubbleio.png)
+![Bubble.io](/images/bubbleio.png)
 
 #### Pros
 - Friendly drag-n-drop interface:
