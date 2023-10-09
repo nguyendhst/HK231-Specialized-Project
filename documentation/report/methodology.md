@@ -80,15 +80,15 @@ Concluding Report: 2023-12-03, 2023-12-10
 
 Table of weekly workload for each team member.
 
-| Week  | Workload              | 2013924 | 2013914 | 2013873                                                |
-| ----- | --------------------- | ------- | ------- | ------------------------------------------------------ |
-| 1-3   | Project Research      | 3       | 3       | Research Promotion & Low-code Platform, Technology     |
-| 4-5   | Prototype Development | 3       | 3       | Build Project Plan, Build Usecase and Usecase scenario |
-| 6-7   | First Release         | 3       | 3       | Initialize Back-end Repository, Design Database Schema |
-| 8-9   | First release         | 3       | 3       | Compile Puck to fit the platform                       |
-| 10-11 | TBD                   | 3       | 3       | 4                                                      |
-| 12-13 | TBD                   | 3       | 3       | 4                                                      |
-| 14-15 | TBD                   | 3       | 3       | 4                                                      |
+| Week  | Workload              | 2013924 | 2013914                                                                                                                                                    | 2013873                                                |
+| ----- | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 1-3   | Project Research      | 3       | Do research on available Low-code / No-code platforms on the market. Summarize and decide which functionality will be included in the development process. | Research Promotion & Low-code Platform, Technology     |
+| 4-5   | Prototype Development | 3       | Come up with page design. Initialize front-end repository.                                                                                                 | Build Project Plan, Build Usecase and Usecase scenario |
+| 6-7   | First Release         | 3       | Modify Puck Editor to fit with the project usecases. Implement page design into front-end.                                                                 | Initialize Back-end Repository, Design Database Schema |
+| 8-9   | First release         | 3       | Create a pool of custom Puck Editor components to fit with the project usecases.                                                                           | Compile Puck to fit the platform                       |
+| 10-11 | TBD                   | 3       | 3                                                                                                                                                          | 4                                                      |
+| 12-13 | TBD                   | 3       | 3                                                                                                                                                          | 4                                                      |
+| 14-15 | TBD                   | 3       | 3                                                                                                                                                          | 4                                                      |
 
 ### Version Control
 
