@@ -43,15 +43,12 @@ Two major milestones are set for the project:
 - Version 0.1.0 release: 05/11/2023
     - The version 0.1.0 release is the first release of the project that can be evaluated by users. The version 0.1 release will include:
 		- Fully functional visual DnD editor.
-		- Workflow UI that allows users to create and manage their workflows.
-		- Application deployment to a cloud service provider.
 		- User authentication and authorization.
 
 - MVP release: 11/12/2023
 	- The MVP release is the final release of the project. The MVP release will include:
 		- Fully functional visual DnD editor.
 		- Workflow DnD Editor that allows users to visually model their workflows.
-		- Business Logic Execution Engine that allows users to execute their workflows.
 
 {{< mermaid >}}
 gantt
@@ -64,7 +61,7 @@ gantt
 		System Design: 2023-09-11, 2023-09-26
 	section Implementation
 		Implementation: 2023-09-26, 2023-12-10
-		v0.0.1 Prototype Release: milestone, 2023-10-08, 0d
+		Prototype Release: milestone, 2023-10-08, 0d
 		Version v0.1.0: milestone, 2023-11-05, 0d
 		MVP Release: milestone, 2023-12-11, 0d
 	section Documentation
@@ -74,6 +71,18 @@ gantt
 		Concluding Report: 2023-12-03, 2023-12-10
 {{< /mermaid >}}
 
+#### Project Schedule
+Table of weekly workload for each team member.
+
+| Week | Workload | 2013924 | 2013914 | 2013 |
+| ---- | -------- | -------- | -------- | -------- |
+| 1-3    | Project Research       | 3        | 3        | 4        |
+| 4-5    | Prototype Development       | 3        | 3        | 4        |
+| 6-7    | First Release       | 3        | 3        | 4        |
+| 8-9    | First release      | 3        | 3        | 4        |
+| 10-11    | TBD       | 3        | 3        | 4        |
+| 12-13    | TBD       | 3        | 3        | 4        |
+| 14-15    | TBD       | 3        | 3        | 4        |
 ### Version Control
 
 Version control of the project is done using Git and GitHub. The project repository is hosted on GitHub and is accessible at [link](https://github.com/users/nguyendhst/projects/1). 
@@ -117,3 +126,4 @@ gitGraph LR:
 
 
 ## Technologies, Tools, and Frameworks
+

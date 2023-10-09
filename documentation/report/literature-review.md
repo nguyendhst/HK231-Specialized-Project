@@ -8,7 +8,39 @@
 
 ***
 
-### Existing Low-code Development Platforms Comparion
+## Martech Stack
+### Definition
+Martech Stack is a term used to describe the collection of technologies that marketers use to execute, analyze and improve their marketing across the customer lifecycle. The term "martech" is a combination of marketing and technology. Martech tools are used to automate or otherwise improve marketing processes, collect and analyze data, and provide various means of reaching and engaging with your target audience.
+
+### Martech Stack Components
+A martech stack is made up of a variety of tools and technologies that marketers use to execute, analyze and improve their marketing across the customer lifecycle. The components of a martech stack can be divided into 6 categories:
+- Advertising & Promotion: tools that help you reach your target audience
+- Content & Experience: tools that help you create and manage content
+- Social & Relationships: tools that help you engage with your audience
+- Commerce & Sales: tools that help you sell your products or services
+- Data: tools that help you collect, analyze and mqanage data
+- Management: tools that help you manage your marketing operations
+
+A sample martech stack can be seen in the following image:
+![martech-stack](/images/martech-stack.png)
+
+Here are some key components and features typically found in a marketing automation platform:
+
+- Customer Relationship Management (CRM): A marketing automation platform often integrates with a CRM system to centralize customer data, including contact information, purchase history, and interactions. This data enables marketers to create personalized and targeted campaigns.
+
+- Lead Management: Marketing automation platforms help businesses capture, track, and manage leads throughout the customer journey. Leads can be segmented based on various criteria such as demographics, behavior, or engagement level, allowing marketers to deliver relevant content and nurture leads until they are ready for sales.
+
+- Email Marketing Automation: These platforms provide tools for designing, scheduling, and sending automated email campaigns. Marketers can create personalized email workflows triggered by specific actions or events, such as subscribing to a newsletter, abandoning a shopping cart, or completing a purchase.
+
+- Campaign Management: Marketing automation platforms offer campaign management features to plan, create, and execute multi-channel marketing campaigns. This includes managing social media posts, paid advertising campaigns, landing pages, and tracking campaign performance.
+
+- Personalization and Segmentation: These platforms enable marketers to deliver personalized content to specific audience segments. They use data and behavior tracking to tailor messages, offers, and recommendations based on individual preferences and past interactions.
+
+- Analytics and Reporting: Marketing automation platforms provide comprehensive analytics and reporting capabilities to measure the effectiveness of marketing campaigns. Marketers can track and analyze key performance indicators (KPIs) such as email open rates, click-through rates, conversion rates, and ROI to optimize their strategies.
+8
+- Workflow Automation: Automation workflows are a core feature of marketing automation platforms. Marketers can create predefined sequences of actions and triggers based on specific conditions or events. These workflows automate repetitive tasks, such as sending follow-up emails, assigning leads to sales representatives, or updating customer records. 
+
+### Existing Low-code Development Platforms Comparison
 Low-code Developing is slowly becoming a thing in business environment. And to keep up with the demand, many low-code development platforms have been provided for the business users with a large variety of usage and pricing. Yet, we would like to introduce 3 platforms that we consider the most notable ones. We are going to categorize them into 3 groups:
 - Open-source
 - Proprietary, free-to-use
